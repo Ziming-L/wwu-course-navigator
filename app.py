@@ -84,15 +84,16 @@ def parse_schedule_text(lines: str) -> dict:
     
     return dict(schedule)
 
-raw_text = extract_raw_text_from_pdf(PDF_PATH)
-# get the list entries:
-"""
-for i, L in enumerate(raw_text):
-    print(i, ": ", L)
-"""
+if __name__ == "__main__":
+    raw_text = extract_raw_text_from_pdf(PDF_PATH)
+    # get the list entries:
+    """
+    for i, L in enumerate(raw_text):
+        print(i, ": ", L)
+    """
 
-sched = parse_schedule_text(raw_text)
+    sched = parse_schedule_text(raw_text)
 
-# print the lines in dictionary for schedule
-for i in sched:
-    print(i, sched.get(i), "\n")
+    # print the lines in dictionary for schedule
+    for i in sched:
+        print(i, sched.get(i), "\n")

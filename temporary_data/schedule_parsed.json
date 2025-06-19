@@ -1,0 +1,96 @@
+{
+  "Monday": [
+    {
+      "course": "CSCI 330 - Database Systems",
+      "time": "10:00 AM - 10:50 AM",
+      "building": "Communication Facility",
+      "room": "314",
+      "instructor": "Ahmed, Shameem"
+    },
+    {
+      "course": "CSCI 347 - Computer Organization II",
+      "time": "11:00 AM - 11:50 AM",
+      "building": "Communication Facility",
+      "room": "420",
+      "instructor": "Elglaly, Yasmine"
+    },
+    {
+      "course": "MATH 341 - Probability and Statistical Inference",
+      "time": "12:00 PM - 12:50 PM",
+      "building": "Bond Hall",
+      "room": "112",
+      "instructor": "Chan, Victor"
+    }
+  ],
+  "Tuesday": [
+    {
+      "course": "CSCI 330 - Database Systems",
+      "time": "10:00 AM - 10:50 AM",
+      "building": "Communication Facility",
+      "room": "314",
+      "instructor": "Ahmed, Shameem"
+    },
+    {
+      "course": "CSCI 347 - Computer Organization II",
+      "time": "11:00 AM - 11:50 AM",
+      "building": "Communication Facility",
+      "room": "420",
+      "instructor": "Elglaly, Yasmine"
+    },
+    {
+      "course": "MATH 341 - Probability and Statistical Inference",
+      "time": "12:00 PM - 12:50 PM",
+      "building": "Bond Hall",
+      "room": "112",
+      "instructor": "Chan, Victor"
+    }
+  ],
+  "Wednesday": [
+    {
+      "course": "CSCI 330 - Database Systems",
+      "time": "10:00 AM - 10:50 AM",
+      "building": "Communication Facility",
+      "room": "314",
+      "instructor": "Ahmed, Shameem"
+    },
+    {
+      "course": "CSCI 347 - Computer Organization II",
+      "time": "11:00 AM - 11:50 AM",
+      "building": "Communication Facility",
+      "room": "420",
+      "instructor": "Elglaly, Yasmine"
+    }
+  ],
+  "Thursday": [
+    {
+      "course": "MATH 341 - Probability and Statistical Inference",
+      "time": "12:00 PM - 12:50 PM",
+      "building": "Bond Hall",
+      "room": "112",
+      "instructor": "Chan, Victor"
+    }
+  ],
+  "Friday": [
+    {
+      "course": "CSCI 330 - Database Systems",
+      "time": "10:00 AM - 10:50 AM",
+      "building": "Communication Facility",
+      "room": "314",
+      "instructor": "Ahmed, Shameem"
+    },
+    {
+      "course": "CSCI 347 - Computer Organization II",
+      "time": "11:00 AM - 11:50 AM",
+      "building": "Communication Facility",
+      "room": "420",
+      "instructor": "Elglaly, Yasmine"
+    },
+    {
+      "course": "MATH 341 - Probability and Statistical Inference",
+      "time": "12:00 PM - 12:50 PM",
+      "building": "Bond Hall",
+      "room": "112",
+      "instructor": "Chan, Victor"
+    }
+  ]
+}

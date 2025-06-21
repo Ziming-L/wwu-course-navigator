@@ -1,96 +1,103 @@
 {
   "Monday": [
     {
-      "course": "CSCI 330 - Database Systems",
-      "time": "10:00 AM - 10:50 AM",
+      "course": "PHYS 220 - Physics with Calculus IV",
+      "time": "09:00 AM - 09:50 AM",
       "building": "Communication Facility",
-      "room": "314",
-      "instructor": "Ahmed, Shameem"
+      "room": "120",
+      "instructor": "Sandelin, Kate"
     },
     {
-      "course": "CSCI 347 - Computer Organization II",
+      "course": "MATH 204 - Elementary Linear Algebra",
       "time": "11:00 AM - 11:50 AM",
-      "building": "Communication Facility",
-      "room": "420",
-      "instructor": "Elglaly, Yasmine"
+      "building": "Bond Hall",
+      "room": "225",
+      "instructor": "Ypma, Tjalling"
     },
     {
-      "course": "MATH 341 - Probability and Statistical Inference",
+      "course": "CSCI 247 - Computer Systems I",
       "time": "12:00 PM - 12:50 PM",
-      "building": "Bond Hall",
-      "room": "112",
-      "instructor": "Chan, Victor"
+      "building": "Communication Facility",
+      "room": "105",
+      "instructor": "Meehan, Michael"
     }
   ],
   "Tuesday": [
     {
-      "course": "CSCI 330 - Database Systems",
-      "time": "10:00 AM - 10:50 AM",
-      "building": "Communication Facility",
-      "room": "314",
-      "instructor": "Ahmed, Shameem"
-    },
-    {
-      "course": "CSCI 347 - Computer Organization II",
+      "course": "MATH 204 - Elementary Linear Algebra",
       "time": "11:00 AM - 11:50 AM",
-      "building": "Communication Facility",
-      "room": "420",
-      "instructor": "Elglaly, Yasmine"
-    },
-    {
-      "course": "MATH 341 - Probability and Statistical Inference",
-      "time": "12:00 PM - 12:50 PM",
       "building": "Bond Hall",
-      "room": "112",
-      "instructor": "Chan, Victor"
+      "room": "225",
+      "instructor": "Ypma, Tjalling"
     }
   ],
   "Wednesday": [
     {
-      "course": "CSCI 330 - Database Systems",
-      "time": "10:00 AM - 10:50 AM",
+      "course": "PHYS 220 - Physics with Calculus IV",
+      "time": "09:00 AM - 09:50 AM",
       "building": "Communication Facility",
-      "room": "314",
-      "instructor": "Ahmed, Shameem"
+      "room": "120",
+      "instructor": "Sandelin, Kate"
     },
     {
-      "course": "CSCI 347 - Computer Organization II",
-      "time": "11:00 AM - 11:50 AM",
+      "course": "CSCI 247 - Computer Systems I",
+      "time": "10:00 AM - 11:50 AM",
       "building": "Communication Facility",
-      "room": "420",
-      "instructor": "Elglaly, Yasmine"
+      "room": "164",
+      "instructor": "Unknown Instructor"
+    },
+    {
+      "course": "CSCI 247 - Computer Systems I",
+      "time": "12:00 PM - 12:50 PM",
+      "building": "Communication Facility",
+      "room": "105",
+      "instructor": "Meehan, Michael"
     }
   ],
   "Thursday": [
     {
-      "course": "MATH 341 - Probability and Statistical Inference",
-      "time": "12:00 PM - 12:50 PM",
+      "course": "MATH 204 - Elementary Linear Algebra",
+      "time": "11:00 AM - 11:50 AM",
       "building": "Bond Hall",
-      "room": "112",
-      "instructor": "Chan, Victor"
+      "room": "225",
+      "instructor": "Ypma, Tjalling"
+    },
+    {
+      "course": "CSCI 247 - Computer Systems I",
+      "time": "12:00 PM - 12:50 PM",
+      "building": "Communication Facility",
+      "room": "105",
+      "instructor": "Meehan, Michael"
+    },
+    {
+      "course": "PHYS 220 - Physics with Calculus IV",
+      "time": "02:00 PM - 04:50 PM",
+      "building": "Communication Facility",
+      "room": "315",
+      "instructor": "Unknown Instructor"
     }
   ],
   "Friday": [
     {
-      "course": "CSCI 330 - Database Systems",
-      "time": "10:00 AM - 10:50 AM",
+      "course": "PHYS 220 - Physics with Calculus IV",
+      "time": "09:00 AM - 09:50 AM",
       "building": "Communication Facility",
-      "room": "314",
-      "instructor": "Ahmed, Shameem"
+      "room": "120",
+      "instructor": "Sandelin, Kate"
     },
     {
-      "course": "CSCI 347 - Computer Organization II",
+      "course": "MATH 204 - Elementary Linear Algebra",
       "time": "11:00 AM - 11:50 AM",
-      "building": "Communication Facility",
-      "room": "420",
-      "instructor": "Elglaly, Yasmine"
+      "building": "Bond Hall",
+      "room": "225",
+      "instructor": "Ypma, Tjalling"
     },
     {
-      "course": "MATH 341 - Probability and Statistical Inference",
+      "course": "CSCI 247 - Computer Systems I",
       "time": "12:00 PM - 12:50 PM",
-      "building": "Bond Hall",
-      "room": "112",
-      "instructor": "Chan, Victor"
+      "building": "Communication Facility",
+      "room": "105",
+      "instructor": "Meehan, Michael"
     }
   ]
 }

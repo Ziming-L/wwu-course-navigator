@@ -5,21 +5,24 @@
       "time": "09:00 AM - 09:50 AM",
       "building": "Communication Facility",
       "room": "120",
-      "instructor": "Sandelin, Kate"
+      "instructor": "Sandelin, Kate",
+      "map_pdf": "./temporary_data/floorplans/CF_120.pdf"
     },
     {
       "course": "MATH 204 - Elementary Linear Algebra",
       "time": "11:00 AM - 11:50 AM",
       "building": "Bond Hall",
       "room": "225",
-      "instructor": "Ypma, Tjalling"
+      "instructor": "Ypma, Tjalling",
+      "map_pdf": "./temporary_data/floorplans/BH_225.pdf"
     },
     {
       "course": "CSCI 247 - Computer Systems I",
       "time": "12:00 PM - 12:50 PM",
       "building": "Communication Facility",
       "room": "105",
-      "instructor": "Meehan, Michael"
+      "instructor": "Meehan, Michael",
+      "map_pdf": "./temporary_data/floorplans/CF_105.pdf"
     }
   ],
   "Tuesday": [
@@ -28,7 +31,8 @@
       "time": "11:00 AM - 11:50 AM",
       "building": "Bond Hall",
       "room": "225",
-      "instructor": "Ypma, Tjalling"
+      "instructor": "Ypma, Tjalling",
+      "map_pdf": "./temporary_data/floorplans/BH_225.pdf"
     }
   ],
   "Wednesday": [
@@ -37,21 +41,24 @@
       "time": "09:00 AM - 09:50 AM",
       "building": "Communication Facility",
       "room": "120",
-      "instructor": "Sandelin, Kate"
+      "instructor": "Sandelin, Kate",
+      "map_pdf": "./temporary_data/floorplans/CF_120.pdf"
     },
     {
       "course": "CSCI 247 - Computer Systems I",
       "time": "10:00 AM - 11:50 AM",
       "building": "Communication Facility",
       "room": "164",
-      "instructor": "Unknown Instructor"
+      "instructor": "Unknown Instructor",
+      "map_pdf": "./temporary_data/floorplans/CF_164.pdf"
     },
     {
       "course": "CSCI 247 - Computer Systems I",
       "time": "12:00 PM - 12:50 PM",
       "building": "Communication Facility",
       "room": "105",
-      "instructor": "Meehan, Michael"
+      "instructor": "Meehan, Michael",
+      "map_pdf": "./temporary_data/floorplans/CF_105.pdf"
     }
   ],
   "Thursday": [
@@ -60,21 +67,24 @@
       "time": "11:00 AM - 11:50 AM",
       "building": "Bond Hall",
       "room": "225",
-      "instructor": "Ypma, Tjalling"
+      "instructor": "Ypma, Tjalling",
+      "map_pdf": "./temporary_data/floorplans/BH_225.pdf"
     },
     {
       "course": "CSCI 247 - Computer Systems I",
       "time": "12:00 PM - 12:50 PM",
       "building": "Communication Facility",
       "room": "105",
-      "instructor": "Meehan, Michael"
+      "instructor": "Meehan, Michael",
+      "map_pdf": "./temporary_data/floorplans/CF_105.pdf"
     },
     {
       "course": "PHYS 220 - Physics with Calculus IV",
       "time": "02:00 PM - 04:50 PM",
       "building": "Communication Facility",
       "room": "315",
-      "instructor": "Unknown Instructor"
+      "instructor": "Unknown Instructor",
+      "map_pdf": "./temporary_data/floorplans/CF_315.pdf"
     }
   ],
   "Friday": [
@@ -83,21 +93,24 @@
       "time": "09:00 AM - 09:50 AM",
       "building": "Communication Facility",
       "room": "120",
-      "instructor": "Sandelin, Kate"
+      "instructor": "Sandelin, Kate",
+      "map_pdf": "./temporary_data/floorplans/CF_120.pdf"
     },
     {
       "course": "MATH 204 - Elementary Linear Algebra",
       "time": "11:00 AM - 11:50 AM",
       "building": "Bond Hall",
       "room": "225",
-      "instructor": "Ypma, Tjalling"
+      "instructor": "Ypma, Tjalling",
+      "map_pdf": "./temporary_data/floorplans/BH_225.pdf"
     },
     {
       "course": "CSCI 247 - Computer Systems I",
       "time": "12:00 PM - 12:50 PM",
       "building": "Communication Facility",
       "room": "105",
-      "instructor": "Meehan, Michael"
+      "instructor": "Meehan, Michael",
+      "map_pdf": "./temporary_data/floorplans/CF_105.pdf"
     }
   ]
 }

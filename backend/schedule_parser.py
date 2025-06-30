@@ -11,8 +11,10 @@ import fitz
 import re
 import json
 import os
+from pathlib import Path
 from collections import defaultdict
 from rich.console import Console
+from rich.panel import Panel
 from datetime import datetime
 from typing import Optional
 
@@ -87,7 +89,12 @@ def parse_schedule_text(lines: str) -> dict:
 
     # find every index that is a course‐code line
     # code_pattern: find the course abbreviation - e.g., "MATH", "CS", "M/CS"
-    code_pattern = re.compile(r'^[A-Z/]+(?:/[A-Z]+)?\s*\d{3}[A-Z]?\s+\d+$')
+    code_pattern = re.compile(
+        r'^[A-Z/]+(?:/[A-Z]+)?\s*'
+        r'\d{3}[A-Z]?'
+        r'\s+'
+        r'[A-Z0-9]+$'
+    )
     # code_indices: get the index from the list that contain the course code
     code_indices = [i for i, L in enumerate(lines) if code_pattern.match(L)]
 
@@ -200,11 +207,11 @@ def load_building_map(path: str) -> dict[str, str]:
     Returns:
         JSON file (dict[str, str])
     """
-    with open(path, "r") as f:
-        return json.load(f)
+    text = Path(path).read_text(encoding="utf-8")
+    return json.loads(text)
 
 
-def highlight_floorplans(sched: dict) -> None:
+def highlight_floorplans(sched: dict, floorplan_out_dir: str, print: bool = True) -> None:
     """
     Create the corresponding highlighted pdf for each course entry.
 
@@ -218,10 +225,13 @@ def highlight_floorplans(sched: dict) -> None:
     Args:
         sched (dict): A mapping weekday → list of schedule entries, where each entry is a dict 
                         with at least "building" and "room" keys.
+        floorplan_out_dir (str): floor plan output directory path. 
+        print (bool): A flag to indicate if print to terminal.
+        
     Returns:
         None: Mutates each entry in-place, setting entry["map_pdf"].
     """
-    os.makedirs(FLOORPLAN_OUT_DIR, exist_ok=True)
+    os.makedirs(floorplan_out_dir, exist_ok=True)
     # load the JSON from another directory
     building_map = load_building_map(BUILDING_MAP_JSON)
     official_names = list(building_map.keys())
@@ -240,7 +250,8 @@ def highlight_floorplans(sched: dict) -> None:
                 match_name = raw_name
             else:
                 match_name = room_finder.best_match_building_name(raw_name, official_names)
-                console.print(f"[yellow]⚠️  [magenta]NAME CHANGE:[/] '{raw_name}' --> '{match_name}'[/]")
+                if print:
+                    console.print(f"[yellow]⚠️  [magenta]NAME CHANGE:[/] '{raw_name}' --> '{match_name}'[/]")
             
             key = f"{match_name}_{room}"
             # reuse existing PDF if already exist
@@ -256,10 +267,10 @@ def highlight_floorplans(sched: dict) -> None:
                 continue
 
             # compute the input and output file path
-            in_pdf = os.path.join(BUILDING_FLOORPLAN_DIR, pdf_filename)
+            in_pdf = Path(BUILDING_FLOORPLAN_DIR) / pdf_filename
             building_abbr = pdf_filename.replace(".pdf", "")
             out_pdf = os.path.join(
-                FLOORPLAN_OUT_DIR, 
+                floorplan_out_dir, 
                 f"{building_abbr}_{room}.pdf"
             )
 
@@ -275,47 +286,54 @@ def highlight_floorplans(sched: dict) -> None:
 
 # ---------- Create a JSON file for schedule --------------
 
-def create_sched_json(sched: dict) -> None:
+def create_sched_json(sched: dict, output_json: str) -> None:
     """
     Create the json file of the schedule dictionary
 
     Args:
         sched (dict): schedule dictionary
-    
+        output_json (str): full path to write the JSON file
+
     Returns:
         None
     """
-    os.makedirs(os.path.dirname(OUTPUT_SCHEDULE_JSON), exist_ok=True)
+    p = Path(output_json)
+    p.parent.mkdir(parents=True, exist_ok=True)
 
-    with open(OUTPUT_SCHEDULE_JSON, "w") as f:
-        json.dump(sched, f, indent=2)
+    p.write_text(json.dumps(sched, indent=2), encoding="utf-8")
     
-    console.print(f"[bold green]✓ Schedule saved to:[/bold green] {OUTPUT_SCHEDULE_JSON}")
-
+    console.print(Panel.fit(
+        f"[bold green]✓ Schedule saved to:[/bold green] {output_json}",
+        border_style="green"
+    ))
 
 # ---------- Run parser for schedule --------------
 
-def process_parser_for_schedule():
+def process_parser_for_schedule(raw_text: list[str], floorplan_out_dir: str, output_json: str, print=True) -> dict:
     """
     Run the complete logic for parsing the schedule
-        1. Extract text from schedule.pdf
-        2. Parse it to a dictionary
-        3. Create the corresponding highlighted room pdf
-        4. Print schedule to terminal
-        5. Create a JSON file to store the schedule
-    """
-    raw_text = extract_raw_text_from_pdf(PDF_PATH)
-    # get the list entries:
-    """
-    for i, L in enumerate(raw_text):
-        print(i, ": ", L)
-    """
+        1. Parse it to a dictionary
+        2. Create the corresponding highlighted room pdf
+        3. Print schedule to terminal
+        4. Create a JSON file to store the schedule
 
-    sched = parse_schedule_text(raw_text)
-    console.print(f"[bold green]✓ Schedule created from:[/bold green] {PDF_PATH}\n")
+    Args:
+        raw_text (list[str]): raw text extracted.
+        floorplan_out_dir (str): floor plan output directory path.
+        output_json (str): schedule output directory path. 
+        print (bool) : default to be true to print to terminal. 
     
-    highlight_floorplans(sched)
-    print_schedule_weekday(sched)
+    Returns:
+        sched (dict): extracted text into correct position in dictionary.
+    """
+    sched = parse_schedule_text(raw_text)
+    if print:
+        console.print(Panel.fit(f"[green]✓ Parsed schedule text[/]"))
+    
+    highlight_floorplans(sched, floorplan_out_dir, print)
+    
+    if print: 
+        print_schedule_weekday(sched)
 
     """
     # print(sched)
@@ -323,11 +341,22 @@ def process_parser_for_schedule():
     for i in sched:
         print(i, sched.get(i), "\n")
     """
+    create_sched_json(sched, output_json)
 
-    create_sched_json(sched)
+    return sched
 
 
 # ---------- Main class for this python file --------------
 
 if __name__ == "__main__":
-    process_parser_for_schedule()
+    raw_text = extract_raw_text_from_pdf(PDF_PATH)
+    # get the list entries:
+    """
+    for i, L in enumerate(raw_text):
+        print(i, ": ", L)
+    """
+    process_parser_for_schedule(
+        raw_text, 
+        FLOORPLAN_OUT_DIR, 
+        OUTPUT_SCHEDULE_JSON
+    )

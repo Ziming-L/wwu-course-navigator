@@ -81,6 +81,8 @@ def highlight_room_on_floorplan(pdf_path: str, room_num: str, output_path: str, 
     doc.close()
 
 
+# ---------- Main class for this python file --------------
+
 if __name__ == "__main__":
     path = "./data/floorplans/CF.pdf"
     room_num = "015"

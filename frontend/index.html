@@ -5,35 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WWU Schedule Map</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        iframe {
-            width: 100%;
-            height: 100vh;
-            border: none;
-        }
-    </style>
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
     <h1>WWU Class Map Visualizer</h1>
     <div id="controls">
-        <input type="file" id="fileInput" accept="application/pdf">
-        or paste schedule text: <br>
-        <textarea name="textInput" rows="4" cols="50"></textarea><br>
-        <button id="loadBtn">Load Schedule</button>
+        <input type="file" id="fileInput" accept="application/pdf"><br>
+        <button type="button" id="loadBtn">Load Schedule</button>
+        <button type="button" id="manualInputBtn">Manual Input</button>
+        <button type="button" id="clearTempBtn">Clear Temp Data</button>
     </div>
+
     <div id="daySelect">
-        <button data-day="Monday">Monday</button>
-        <button data-day="Tuesday">Tuesday</button>
-        <button data-day="Wednesday">Wednesday</button>
-        <button data-day="Thursday">Thursday</button>
-        <button data-day="Friday">Friday</button>
+        <button type="button" data-day="Monday">Monday</button>
+        <button type="button" data-day="Tuesday">Tuesday</button>
+        <button type="button" data-day="Wednesday">Wednesday</button>
+        <button type="button" data-day="Thursday">Thursday</button>
+        <button type="button" data-day="Friday">Friday</button>
     </div>
     <div id="scheduleDisplay">
         <ul id="classList"></ul>
         <div id="floorplanContainer"></div>
-        <div id="map" style="height: 400px;"></div>
+        <!-- <div id="map" style="height: 400px;"></div> -->
     </div>
-    <script src=""script.js></script>
-    <iframe src="https://map.wwu.edu" title="WWU Campus Map"></iframe>
+
+    <div class="modal-backdrop" id="manualModal" style="display:none;align-items:center;justify-content:center;position:fixed;inset:0;background:rgba(0,0,0,0.5);">
+        <div class="modal" style="background:#fff;padding:1rem;border-radius:8px;max-width:500px;width:90%;max-height:80vh;overflow:auto;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+                <h2>Enter Course Details</h2>
+                <button type="button" id="closeModal">✕</button>
+            </div>
+            <div class="modal-body" style="margin:1rem 0;">
+                <button type="button" id="addEntryBtn">Add Course Entry</button>
+                <div id="entriesContainer"></div>
+            </div>
+            <div style="text-align:right;">
+                <button type="button" id="saveCourses">Save All</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <!-- <iframe src="https://map.wwu.edu/" title="WWU Campus Map"></iframe> -->
 </body>
 </html>

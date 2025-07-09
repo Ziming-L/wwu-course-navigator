@@ -1,0 +1,497 @@
+{
+  "Academic Instructional Center": {
+    "fileName": "AI.pdf",
+    "lat": 48.73212752798216,
+    "lon": -122.48580145042078
+  },
+  "Academic West": {
+    "fileName": "AW.pdf",
+    "lat": 48.732123450534374,
+    "lon": -122.48663024669688
+  },
+  "Administrative Services": {
+    "fileName": "AC.pdf",
+    "lat": 48.731070168378466,
+    "lon": -122.47372479229266
+  },
+  "Alma Clark Glass Hall": {
+    "fileName": "CG.pdf",
+    "lat": 48.73577903349541,
+    "lon": -122.4888783515743
+  },
+  "Alumni House": {
+    "fileName": "AL.pdf",
+    "lat": 48.74081418644046,
+    "lon": -122.48278426544807
+  },
+  "Archives Building": {
+    "fileName": "AB.pdf",
+    "lat": 48.72616663351746,
+    "lon": -122.48547647834974
+  },
+  "Arntzen Hall": {
+    "fileName": "AH.pdf",
+    "lat": 48.73408455520115, 
+    "lon": -122.48552027573461
+  },
+  "Art Annex": {
+    "fileName": "AA.pdf",
+    "lat": 48.735829217603566,
+    "lon": -122.48526545922756
+  },
+  "Baseball Field Storage": {
+    "fileName": "SB.pdf",
+    "lat": 48.72790964270766, 
+    "lon": -122.48945808227828
+  },
+  "Biology Building": {
+    "fileName": "BI.pdf",
+    "lat": 48.734000675579246,
+    "lon": -122.4870186527459
+  },
+  "Biology Greenhouse": {
+    "fileName": "BG.pdf",
+    "lat": 48.73398329629054,
+    "lon": -122.48519488700944
+  },
+  "Birnam Wood Community Building": {
+    "fileName": "BC.pdf",
+    "lat": 48.73081738394086,
+    "lon": -122.47862379682275
+  },
+  "Birnam Wood Laundry Room": {
+    "fileName": "BL.pdf",
+    "lat": 48.731828485641465,
+    "lon": -122.47660806403047
+  },
+  "Birnam Wood Stack 1": {
+    "fileName": "BW01.pdf",
+    "lat": 48.731711719030486, 
+    "lon": -122.47646724438185
+  },
+  "Birnam Wood Stack 2": {
+    "fileName": "BW02.pdf",
+    "lat": 48.73148614640044,
+    "lon": -122.47705868690605
+  },
+  "Birnam Wood Stack 3": {
+    "fileName": "BW03.pdf",
+    "lat": 48.731011113663435, 
+    "lon": -122.47814500996958
+  },
+  "Birnam Wood Stack 4": {
+    "fileName": "BW04.pdf",
+    "lat": 48.73055996109838, 
+    "lon": -122.47920316908571
+  },
+  "Birnam Wood Stack 5": {
+    "fileName": "BW05.pdf",
+    "lat": 48.7309235373003, 
+    "lon": -122.47892957662553
+  },
+  "Birnam Wood Stack 6": {
+    "fileName": "BW06.pdf",
+    "lat": 48.73128976468532, 
+    "lon": -122.47878875697691
+  },
+  "Birnam Wood Stack 7": {
+    "fileName": "BW07.pdf",
+    "lat": 48.731571067972226, 
+    "lon": -122.47812891632694
+  },
+  "Bond Hall": {
+    "fileName": "BH.pdf",
+    "lat": 48.73663965921669, 
+    "lon": -122.4859598017419
+  },
+  "Buchanan Towers": {
+    "fileName": "BT.pdf",
+    "lat": 48.72683194094345, 
+    "lon": -122.48680408846487
+  },
+  "Buchanan Towers East": {
+    "fileName": "BQ.pdf",
+    "lat": 48.72682486366882, 
+    "lon": -122.4863642062144
+  },
+  "Campus Services": {
+    "fileName": "CS.pdf",
+    "lat": 48.72753380949973, 
+    "lon": -122.48992480848304
+  },
+  "Canada House": {
+    "fileName": "CA.pdf",
+    "lat": 48.73799707059525, 
+    "lon": -122.48792104280804
+  },
+  "Carver": {
+    "fileName": "CV.pdf",
+    "lat": 48.73596531485112, 
+    "lon": -122.48649153413196
+  },
+  "College Hall": {
+    "fileName": "CH.pdf",
+    "lat": 48.737274462425255, 
+    "lon": -122.48709432500354
+  },
+  "Commissary": {
+    "fileName": "CM.pdf",
+    "lat": 48.72736964041375, 
+    "lon": -122.48441323356636
+  },
+  "Communications Facility": {
+    "fileName": "CF.pdf",
+    "lat": 48.73287672034375, 
+    "lon": -122.48522601215659
+  },
+  "Crew Facility": {
+    "fileName": "CR-1.pdf",
+    "lat": null,
+    "lon": null
+  },
+  "Edens Hall": {
+    "fileName": "EH.pdf",
+    "lat": 48.739147533472384, 
+    "lon": -122.48345486966119
+  },
+  "Edens North": {
+    "fileName": "EN.pdf",
+    "lat": 48.7395260734773, 
+    "lon": -122.48302571624613
+  },
+  "Environmental Studies": {
+    "fileName": "ES.pdf",
+    "lat": 48.73341525748307, 
+    "lon": -122.48583010533876
+  },
+  "Fairhaven Academic": {
+    "fileName": "FA.pdf",
+    "lat": 48.73035786403318, 
+    "lon": -122.4856115373428
+  },
+  "Fairhaven Cabin": {
+    "fileName": "FS.pdf",
+    "lat": 48.72886212925934, 
+    "lon": -122.48693937035371
+  },
+  "Fairhaven Playground Building": {
+    "fileName": "FV-1.pdf",
+    "lat": 48.72963759108811, 
+    "lon": -122.48619280179342
+  },
+  "Fairhaven Stack 1": {
+    "fileName": "FX01.pdf",
+    "lat": 48.729975017373356, 
+    "lon": -122.48554851338892
+  },
+  "Fairhaven Stack 10": {
+    "fileName": "FX10.pdf",
+    "lat": 48.729044818098515, 
+    "lon": -122.48627259840256
+  },
+  "Fairhaven Stack 11": {
+    "fileName": "FX11.pdf",
+    "lat": 48.72925809012852, 
+    "lon": -122.48637140216424
+  },
+  "Fairhaven Stack 12": {
+    "fileName": "FX12.pdf",
+    "lat": 48.72943230202806, 
+    "lon": -122.48635880966832
+  },
+  "Fairhaven Stack 2": {
+    "fileName": "FX02.pdf",
+    "lat": 48.72979682363741, 
+    "lon": -122.48550929803022
+  },
+  "Fairhaven Stack 3": {
+    "fileName": "FX03.pdf",
+    "lat": 48.729630125699856, 
+    "lon": -122.48548751171982
+  },
+  "Fairhaven Stack 4": {
+    "fileName": "FX04.pdf",
+    "lat": 48.72950976914655, 
+    "lon": -122.48562226680185
+  },
+  "Fairhaven Stack 5": {
+    "fileName": "FX05.pdf",
+    "lat": 48.72929746178007, 
+    "lon": -122.48560617354877
+  },
+  "Fairhaven Stack 6": {
+    "fileName": "FX06.pdf",
+    "lat": 48.72909250725503,
+    "lon": -122.48546602834989
+  },
+  "Fairhaven Stack 7": {
+    "fileName": "FX07.pdf",
+    "lat": 48.72892042104932, 
+    "lon": -122.48559647153844
+  },
+  "Fairhaven Stack 8": {
+    "fileName": "FX08.pdf",
+    "lat": 48.728924285332184, 
+    "lon": -122.48584166990652
+  },
+  "Fairhaven Stack 9": {
+    "fileName": "FX09.pdf",
+    "lat": 48.72903663225934, 
+    "lon": -122.48601199016333
+  },
+  "Fine Arts": {
+    "fileName": "FI.pdf",
+    "lat": 48.73528988155446, 
+    "lon": -122.48528386578094
+  },
+  "Fraser Hall": {
+    "fileName": "FR.pdf",
+    "lat": 48.73710895437165, 
+    "lon": -122.48464447766341
+  },
+  "Haggard Hall": {
+    "fileName": "HH.pdf",
+    "lat": 48.7375519699824, 
+    "lon": -122.48615606041805
+  },
+  "Harrington Field Multipurpose Building": {
+    "fileName": "MU.pdf",
+    "lat": 48.72784513463051, 
+    "lon": -122.48884126288876
+  },
+  "Higginson Hall": {
+    "fileName": "HG.pdf",
+    "lat": 48.73987752809041, 
+    "lon": -122.48333250443879
+  },
+  "High Street Hall": {
+    "fileName": "HS.pdf",
+    "lat": 48.73748650081203, 
+    "lon": -122.48807678502813
+  },
+  "Humanities Building": {
+    "fileName": "HU.pdf",
+    "lat": 48.737375401116054, 
+    "lon": -122.48503119006915
+  },
+  "Interdisciplinary Science Building": {
+    "fileName": "IS.pdf",
+    "lat":  48.733539768289134, 
+    "lon": -122.48740140448307
+  },
+  "Kaiser Borsari Hall": {
+    "fileName": "KB.pdf",
+    "lat": 48.73257206124976, 
+    "lon": -122.48482924300411
+  },
+  "Lakewood Student Center": {
+    "fileName": "LW.pdf",
+    "lat": 48.72935885384436, 
+    "lon": -122.34071032051395
+  },
+  "Maintenance Modular": {
+    "fileName": "MM.pdf",
+    "lat": null,
+    "lon": null
+  },
+  "Mathes Hall": {
+    "fileName": "MA.pdf",
+    "lat": 48.74002186202655, 
+    "lon": -122.48468561977306
+  },
+  "Miller Hall": {
+    "fileName": "MH.pdf",
+    "lat": 48.7365020998654, 
+    "lon": -122.48472729246879
+  },
+  "Morse Hall": {
+    "fileName": "CB.pdf",
+    "lat": 48.73468639042484, 
+    "lon": -122.48663174403488
+  },
+  "Nash Hall": {
+    "fileName": "NA.pdf",
+    "lat": 48.740175581205456, 
+    "lon": -122.4840988618508
+  },
+  "Old Main": {
+    "fileName": "OM.pdf",
+    "lat": 48.73788542621817, 
+    "lon": -122.48416739606515
+  },
+  "Parks Hall": {
+    "fileName": "PH.pdf",
+    "lat": 48.73354405748748, 
+    "lon": -122.48657652622727
+  },
+  "Performing Arts Center": {
+    "fileName": "PA.pdf",
+    "lat": 48.73808979529645, 
+    "lon": -122.48715322519521
+  },
+  "Physical Plant": {
+    "fileName": "PP.pdf",
+    "lat": 48.72456558963558, 
+    "lon": -122.4832262896813
+  },
+  "Physical Plant Maintenance Garage": {
+    "fileName": "MG.pdf",
+    "lat": 48.72471999605182, 
+    "lon": -122.48231068764204
+  },
+  "Physical Plant Maintenance Warehouse": {
+    "fileName": "MW.pdf",
+    "lat": 48.724695943442526, 
+    "lon": -122.48196276763531
+  },
+  "Physical Plant Marshalling Yard": {
+    "fileName": "MY.pdf",
+    "lat": 48.72502683876422, 
+    "lon": -122.4815881763177
+  },
+  "Recycling Center": {
+    "fileName": "RE.pdf",
+    "lat": 48.7247366592715, 
+    "lon": -122.48148088796394
+  },
+  "Ridgeway Alpha": {
+    "fileName": "RA.pdf",
+    "lat": 48.73465967640673, 
+    "lon": -122.48893564370951
+  },
+  "Ridgeway Beta": {
+    "fileName": "RB.pdf",
+    "lat": 48.73367740069124, 
+    "lon": -122.48914162676242
+  },
+  "Ridgeway Commons": {
+    "fileName": "RC.pdf",
+    "lat": 48.73465563565582, 
+    "lon": -122.48966828088328
+  },
+  "Ridgeway Delta": {
+    "fileName": "RD.pdf",
+    "lat": 48.73422929441607, 
+    "lon": -122.48896822433616
+  },
+  "Ridgeway Gamma": {
+    "fileName": "RG.pdf",
+    "lat": 48.73306892916077, 
+    "lon": -122.48992275099421
+  },
+  "Ridgeway Kappa": {
+    "fileName": "RK.pdf",
+    "lat": 48.73398353998391, 
+    "lon": -122.49020159424681
+  },
+  "Ridgeway Omega": {
+    "fileName": "RO.pdf",
+    "lat": 48.73465528559792, 
+    "lon": -122.4884441822907
+  },
+  "Ridgeway Sigma": {
+    "fileName": "RS.pdf",
+    "lat": 48.735183989366625, 
+    "lon": -122.48839655715062
+  },
+  "Ross Engineering Technology": {
+    "fileName": "ET.pdf",
+    "lat": 48.734606782032415, 
+    "lon": -122.48555499966774
+  },
+  "Science, Math & Technology Building": {
+    "fileName": "SL.pdf",
+    "lat": 48.73531721117497, 
+    "lon": -122.48718441520975
+  },
+  "Shannon Point Academic Building": {
+    "fileName": "SM.pdf",
+    "lat": 48.508309827707215, 
+    "lon": -122.68355415715915
+  },
+  "Shannon Point Boat Storage": {
+    "fileName": "SS.pdf",
+    "lat": 48.508448036118025, 
+    "lon": -122.68369484975918
+  },
+  "Shannon Point Caretaker's Cottage": {
+    "fileName": "SR.pdf",
+    "lat": 48.50482357854702, 
+    "lon": -122.68521255670129
+  },
+  "Shannon Point Commons": {
+    "fileName": "SC.pdf",
+    "lat": 48.50468749530546, 
+    "lon": -122.68568082873077
+  },
+  "Shannon Point Housing": {
+    "fileName": "SD.pdf",
+    "lat": 48.50744068231507, 
+    "lon": -122.68393306196688
+  },
+  "Shannon Point Marine Center": {
+    "fileName": "MC.pdf",
+    "lat": 48.50846558368445, 
+    "lon": -122.68413491682423
+  },
+  "Shannon Point Marine Education": {
+    "fileName": "ME.pdf",
+    "lat": 48.508204527054204, 
+    "lon": -122.68426958910977
+  },
+  "Shannon Point Seawater Pump House": {
+    "fileName": "MD.pdf",
+    "lat": null,
+    "lon": null
+  },
+  "Shannon Point Seawater Pump House 2": {
+    "fileName": "MQ.pdf",
+    "lat": null,
+    "lon": null
+  },
+  "Sinclair Island": {
+    "fileName": "SI.pdf",
+    "lat": 48.61903375654569, 
+    "lon": -122.6966734558844
+  },
+  "Steam Plant": {
+    "fileName": "SP.pdf",
+    "lat": 48.73498443745437, 
+    "lon": -122.48488821241551
+  },
+  "Tennis Storage": {
+    "fileName": "TD-1.pdf",
+    "lat": 48.72713253655269, 
+    "lon": -122.48788473576325
+  },
+  "Track Equipment Building": {
+    "fileName": "TE-1.pdf",
+    "lat": 48.733519813050734, 
+    "lon": -122.48819188874926
+  },
+  "Viking Commons": {
+    "fileName": "VC.pdf",
+    "lat": 48.739266153570846, 
+    "lon": -122.48519155224356
+  },
+  "Viking Union": {
+    "fileName": "VU.pdf",
+    "lat": 48.73899302164315, 
+    "lon": -122.48621685335141
+  },
+  "Wade King Student Rec Center": {
+    "fileName": "SV.pdf",
+    "lat": 48.731681278013205, 
+    "lon": -122.48902138626892
+  },
+  "Weight Training": {
+    "fileName": "WT-1%20%281%29.pdf",
+    "lat": 48.733444945251414, 
+    "lon": -122.48886093099176
+  },
+  "Wilson Library": {
+    "fileName": "WL.pdf",
+    "lat": 48.73781335941453, 
+    "lon": -122.48577862769395
+  }
+}

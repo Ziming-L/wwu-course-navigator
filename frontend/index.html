@@ -8,12 +8,23 @@
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
+    <!-- <div id="themeToggle" style="text-align: center; margin: 1rem;">
+        <label>
+            <input type="checkbox" id="darkModeSwitch">
+            🌙 Dark Mode
+        </label>
+    </div> -->
     <h1>WWU Class Map Visualizer</h1>
     <div id="controls">
-        <input type="file" id="fileInput" accept="application/pdf"><br>
-        <button type="button" id="loadBtn">Load Schedule</button>
-        <button type="button" id="manualInputBtn">Manual Input</button>
-        <button type="button" id="clearTempBtn">Clear Temp Data</button>
+        <input type="file" id="fileInput" accept="application/pdf hidden">
+        <label for="fileInput" class="custom-file-upload">Choose PDF...</label>
+        <span id="fileName" class="file-name">No file chosen</span>
+
+        <div class="btn-group">
+            <button type="button" id="loadBtn">Load Schedule</button>
+            <button type="button" id="manualInputBtn">Manual Input</button>
+            <button type="button" id="clearTempBtn">Clear Data</button>
+        </div>
     </div>
 
     <div id="daySelect">
@@ -29,13 +40,13 @@
         <!-- <div id="map" style="height: 400px;"></div> -->
     </div>
 
-    <div class="modal-backdrop" id="manualModal" style="display:none;align-items:center;justify-content:center;position:fixed;inset:0;background:rgba(0,0,0,0.5);">
-        <div class="modal" style="background:#fff;padding:1rem;border-radius:8px;max-width:500px;width:90%;max-height:80vh;overflow:auto;">
-            <div style="display:flex;justify-content:space-between;align-items:center;">
+    <div class="modal-backdrop" id="manualModal">
+        <div class="modal">
+            <div class="modal-header">
                 <h2>Enter Course Details</h2>
                 <button type="button" id="closeModal">✕</button>
             </div>
-            <div class="modal-body" style="margin:1rem 0;">
+            <div class="modal-body">
                 <button type="button" id="addEntryBtn">Add Course Entry</button>
                 <div id="entriesContainer"></div>
             </div>
@@ -45,8 +56,16 @@
         </div>
     </div>
 
+    <div id="customAlert" class="alert-backdrop" style="display:none;">
+        <div class="alert-box">
+            <p id="alertMessage"></p>
+            <div class="btn-row" id="modalButtons">
+                <button id="alertCancel" style="display:none">Cancel</button>
+                <button id="alertOk">OK</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
-    <!-- <iframe src="https://map.wwu.edu/" title="WWU Campus Map"></iframe> -->
 </body>
 </html>

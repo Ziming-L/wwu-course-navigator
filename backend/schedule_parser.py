@@ -23,7 +23,7 @@ console = Console()
 # change below path by user file
 PDF_PATH = "./temporary_data/schedule.pdf"
 OUTPUT_SCHEDULE_JSON = "./temporary_data/schedule_parsed.json"
-BUILDING_MAP_JSON = "./data/building_map.json"
+BUILDING_MAP_JSON = "./data/building_map_with_coords.json"
 BUILDING_FLOORPLAN_DIR = "./data/floorplans"
 FLOORPLAN_OUT_DIR = "./temporary_data/floorplans"
 
@@ -235,8 +235,6 @@ def highlight_floorplans(sched: dict, floorplan_out_dir: str, print: bool = True
     # load the JSON from another directory
     building_map = load_building_map(BUILDING_MAP_JSON)
     official_names = list(building_map.keys())
-
-    # storage to avoid creating repeated pdf: building_pdf_key --> output_pdf_path
     cache = {}
 
     # loop through all entries
@@ -256,14 +254,23 @@ def highlight_floorplans(sched: dict, floorplan_out_dir: str, print: bool = True
             key = f"{match_name}_{room}"
             # reuse existing PDF if already exist
             if key in cache:
-                entry["map_pdf"] = cache[key]
+                cached_data = cache[key]
+                entry["map_pdf"] = cached_data["map_pdf"]
+                entry["lat"] = cached_data.get("lat")
+                entry["lon"] = cached_data.get("lon")
                 continue
 
             # get the floor plan PDF name
-            pdf_filename = building_map.get(match_name)
+            building_data = building_map.get(match_name, {})
+            pdf_filename = building_data.get("fileName")
+            lat = building_data.get("lat")
+            lon = building_data.get("lon")
+
             if not pdf_filename:
                 console.print(f"[red]NO floorplan PDF for[/] [bold]{raw_name}[/]")
                 entry["map_pdf"] = ""
+                entry["lat"] = None
+                entry["lon"] = None
                 continue
 
             # compute the input and output file path
@@ -278,10 +285,17 @@ def highlight_floorplans(sched: dict, floorplan_out_dir: str, print: bool = True
             room_finder.highlight_room_on_floorplan(in_pdf, room, out_pdf)
 
             if os.path.exists(out_pdf):
-                cache[key] = out_pdf
+                cache_data = {
+                    "map_pdf": out_pdf, 
+                    "lat" : lat, 
+                    "lon" : lon
+                }
+                cache[key] = cache_data
                 entry["map_pdf"] = out_pdf
             else:
                 entry["map_pdf"] = ""
+                entry["lat"] = None
+                entry["lon"] = None
 
 
 # ---------- Create a JSON file for schedule --------------
@@ -358,5 +372,5 @@ if __name__ == "__main__":
     process_parser_for_schedule(
         raw_text, 
         FLOORPLAN_OUT_DIR, 
-        OUTPUT_SCHEDULE_JSON
+        OUTPUT_SCHEDULE_JSON, 
     )

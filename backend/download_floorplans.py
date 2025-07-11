@@ -22,7 +22,7 @@ BASE_URL = "https://fdo.wwu.edu"
 # directory to save the pdf
 OUTPUT_DIR = "./data/floorplans"
 # json file containing the building name to PDF location
-MAPPING_FILE = "./data/building_map.json"
+BUILDING_MAP_JSON = "./data/building_map.json"
 
 # ---------- Create directory if needed --------------
 
@@ -168,10 +168,10 @@ def download_and_process_floorplans():
         download_file(name, url, OUTPUT_DIR) for name, url in pdf_links
     )
 
-    with open(MAPPING_FILE, 'w') as f:
+    with open(BUILDING_MAP_JSON, 'w') as f:
         json.dump(building_map, f, indent=2, sort_keys=True)
 
-    console.print(f"\n[bold green]✓ Mapping saved to:[/bold green] {MAPPING_FILE}")
+    console.print(f"\n[bold green]✓ Mapping saved to:[/bold green] {BUILDING_MAP_JSON}")
     console.print(f"\n[green]All done![/]")
 
 

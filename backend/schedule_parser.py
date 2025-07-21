@@ -292,6 +292,8 @@ def highlight_floorplans(sched: dict, floorplan_out_dir: str, print: bool = True
                 }
                 cache[key] = cache_data
                 entry["map_pdf"] = out_pdf
+                entry["lat"] = lat
+                entry["lon"] = lon
             else:
                 entry["map_pdf"] = ""
                 entry["lat"] = None

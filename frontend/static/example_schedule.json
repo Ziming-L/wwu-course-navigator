@@ -1,0 +1,59 @@
+[
+  {
+    "courseCode": "CSCI 367",
+    "courseName": "Computer Networks I",
+    "courseSection": "0",
+    "creditHours": "4.0",
+    "crn": "22917",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Friday"
+    ],
+    "endDate": "06/13/2025",
+    "endTime": "09:50 AM",
+    "instructor": "Mare, Shri",
+    "location": "Main Campus, Communication Facility, 420",
+    "startDate": "04/01/2025",
+    "startTime": "09:00 AM"
+  },
+  {
+    "courseCode": "CSCI 404",
+    "courseName": "Natural Language Processing",
+    "courseSection": "0",
+    "creditHours": "4.0",
+    "crn": "22918",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Friday"
+    ],
+    "endDate": "06/13/2025",
+    "endTime": "12:50 PM",
+    "instructor": "Liu, Yudong",
+    "location": "Main Campus, Communication Facility, 125",
+    "startDate": "04/01/2025",
+    "startTime": "12:00 PM"
+  },
+  {
+    "courseCode": "DATA 471",
+    "courseName": "Machine Learning",
+    "courseSection": "0",
+    "creditHours": "4.0",
+    "crn": "23115",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Friday"
+    ],
+    "endDate": "06/13/2025",
+    "endTime": "02:50 PM",
+    "instructor": "Sizemore, Logan",
+    "location": "Main Campus, Environmental Studies Center, 080",
+    "startDate": "04/01/2025",
+    "startTime": "02:00 PM"
+  }
+]

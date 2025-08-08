@@ -1,13 +1,248 @@
+:root {
+    --theme-switch-bg-start: #9de8ff;
+    --theme-switch-bg-end: #ffe991;
+    --theme-switch-bg-start-hover: #e2ce7e;
+    --theme-switch-bg-end-hover: #88d6ed;
+    --theme-label-color: black;
+    
+    --h1-color: #1e293b;
+
+    --bg-gradient-start: #ddf7ff;
+    --bg-gradient-end: #fef3c7;
+
+    --modal-alert-backdrop-background: rgba(0, 0, 0, 0.4);
+    --modal-background: rgba(255, 255, 255, 0.8);
+    --border-color: rgba(255, 255, 255, 0.6);
+    --glass-button-background: rgba(255, 255, 255, 0.3);
+
+    --file-name-color: #444;
+    --file-name-background: rgba(159, 159, 159, 0.2);
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+
+    --save-course-color: #333;
+
+    --button-hover-background: rgba(255, 255, 255, 0.5);
+    --button-hover-border-color: rgba(255, 255, 255, 0.9);
+
+    --entries-container-background: rgba(255, 255, 255, 0.2);
+    --entries-container-border-color: rgba(255, 255, 255, 0.4);
+
+    --controls-and-daySelect-background: rgba(255, 255, 255, 0.25);
+
+    --file-upload-background: rgba(255, 255, 255, 0.5);
+    --file-drop-background: rgba(255, 255, 255, 0.90);
+    --file-upload-border-color: rgba(224, 224, 224, 0.6);
+    --file-upload-hover-border-color: rgba(173, 173, 173, 0.9);
+
+    --load-button-background: #c0ffe6;
+    --load-button-hover-background: #94e2c7;
+
+    --load-example-button-background: #dea5ff;
+    --load-example-button-hover-background: #b07ccf;
+
+    --manual-input-button-background: #fef5c5;
+    --manual-input-button-hover-background: #e3d69a;
+
+    --view-resource-button-background: #c0e1ff;
+    --view-resource-button-hover-background: #93bbdd;
+
+    --clear-temporary-button-background: #ffbcbc;
+    --clear-temporary-button-hover-background: #e4a4a4;
+
+    --alert-ok-button-background: #c7ffe9;
+    --alert-ok-button-hover-background: #a9f2d0;
+    --alert-cancel-button-background: #ffbcbc;
+    --alert-cancel-button-hover-background:#e4a4a4;
+    --summary-header-color: #5A67D8;
+
+    --daySelect-button-active-background: rgba(255, 255, 255, 0.7);
+    --daySelect-button-active-color: #000;
+    --dayselect-button-disable-background: rgba(200, 200, 200, 0.2);
+    --daySelect-button-disable-color: rgba(100, 100, 100, 0.6);
+
+    --remove-entry-button-background: #e74c3c;
+    --remove-entry-button-color: white;
+    --remove-entry-button-hover-background: #c0392b;
+
+    --apply-default-button-background: #3498db; 
+    --apply-default-button-hover-background: #2a7fb8;
+    --apply-default-revert-button-background: #e67e22;
+    --apply-default-revert-button-hover-background: #d35400;
+
+    --required-star-color: red;
+
+    --input-background: #bababa0c;
+
+    --classlist-color: black;
+    --classlist-hover-background: rgba(52, 152, 219, 0.1);
+    --classlist-selected-background: rgba(41, 128, 185, 0.2);
+    --classlist-header-and-no-floorplan-color: #555;
+
+    --building-dropdown-background: rgba(245, 245, 245, 0.85);
+    --building-dropdown-hover-background: rgba(52, 152, 219, 0.1);
+}
+
+body.dark {
+    --theme-switch-bg-start: #4a4a65;
+    --theme-switch-bg-end: #4e364d;
+    --theme-switch-bg-start-hover: #4d9cc0;
+    --theme-switch-bg-end-hover: #aa6095;
+    --theme-label-color: white;
+
+    --h1-color: #f1f5f9;
+
+    --bg-gradient-start: #1a1a2e;
+    --bg-gradient-end: #2e2e3f;
+
+    --modal-alert-backdrop-background: rgba(0, 0, 0, 0.6);
+    --modal-background: rgba(30, 30, 30, 0.9);
+    --border-color: rgba(255, 255, 255, 0.2);
+
+    --glass-button-background: rgba(255, 255, 255, 0.1);
+    --file-name-color: #ddd;
+    --file-name-background: rgba(255, 255, 255, 0.05);
+
+    --box-shadow-color: rgba(0, 0, 0, 0.3);
+
+    --save-course-color: #eee;
+
+    --button-hover-background: rgba(255, 255, 255, 0.15);
+    --button-hover-border-color: rgba(255, 255, 255, 0.35);
+
+    --entries-container-background: rgba(255, 255, 255, 0.05);
+    --entries-container-border-color: rgba(255, 255, 255, 0.1);
+
+    --controls-and-daySelect-background: rgba(255, 255, 255, 0.05);
+
+    --file-upload-background: rgba(255, 255, 255, 0.05);
+    --file-drop-background: rgba(111, 111, 111, 0.90);
+    --file-upload-border-color: rgba(255, 255, 255, 0.2);
+    --file-upload-hover-border-color: rgba(255, 255, 255, 0.4);
+
+    --load-button-background: #32a187;
+    --load-button-hover-background: #307c6b;
+
+    --load-example-button-background: #944fbc;
+    --load-example-button-hover-background: #733995;
+
+    --manual-input-button-background: #bba23c;
+    --manual-input-button-hover-background: #86712c;
+
+    --view-resource-button-background: #2674b4;
+    --view-resource-button-hover-background: #3c6486;
+
+    --clear-temporary-button-background: #b03737;
+    --clear-temporary-button-hover-background: #8a3737;
+
+    --alert-ok-button-background: #2e8c6e;
+    --alert-ok-button-hover-background: #44aa86;
+    --alert-cancel-button-background: #8c2b2b;
+    --alert-cancel-button-hover-background: #a94444;
+    --summary-header-color: rgb(248, 210, 75);
+
+    --daySelect-button-active-background: rgba(255, 255, 255, 0.15);
+    --daySelect-button-active-color: #fff;
+
+    --dayselect-button-disable-background: rgba(255, 255, 255, 0.05);
+    --daySelect-button-disable-color: rgba(255, 255, 255, 0.4);
+
+    --remove-entry-button-background: #c0392b;
+    --remove-entry-button-color: white;
+    --remove-entry-button-hover-background: #922b21;
+
+    --apply-default-button-background: #2980b9;
+    --apply-default-button-hover-background: #1f618d;
+
+    --apply-default-revert-button-background: #ca6f1e;
+    --apply-default-revert-button-hover-background: #af601a;
+
+    --required-star-color: #ff6b6b;
+
+    --input-background: #ffffffe0;
+
+    --classlist-color: rgba(255, 255, 255, 0.879);
+    --classlist-hover-background: rgba(255, 255, 255, 0.07);
+    --classlist-selected-background: rgba(255, 255, 255, 0.1);
+    --classlist-header-and-no-floorplan-color: #ccc;
+
+    --building-dropdown-background: rgba(101, 101, 101, 0.95);
+    --building-dropdown-hover-background: rgba(52, 152, 219, 0.35);
+
+}
+
+
+#themeToggle {
+    position: fixed;
+    top: 0.7rem;
+    right: 0.7rem;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    width: auto;
+    height: auto;
+    overflow: visible;
+}
+
+#darkModeSwitch {
+    display: flex;
+    align-items: center;
+    gap: 0.5ch;
+    white-space: nowrap; 
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    background: linear-gradient(
+        120deg,
+        var(--theme-switch-bg-start),
+        var(--theme-switch-bg-end)
+    );
+    backdrop-filter: blur(12px);
+    cursor: pointer;
+
+    transition: max-width 0.4s ease, background 0.3s ease;
+    opacity: 1;
+    pointer-events: auto;
+}
+.theme-label {
+    color: var(--theme-label-color);
+}
+
+#themeToggle.scrolled #darkModeSwitch {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-1rem);
+}
+#themeToggle.scrolled:hover #darkModeSwitch {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+#darkModeSwitch:hover {
+    background: linear-gradient(
+        120deg,
+        var(--theme-switch-bg-start-hover),
+        var(--theme-switch-bg-end-hover)
+    );
+}
+@media (max-width: 710px) {
+    #darkModeSwitch .theme-label {
+        display: none;
+    }
+}
+
 /* header style */
 h1 {
     text-align: center;
     font-size: 3rem;
-    color: #1e293b;
+    color: var(--h1-color);
 }
 
 body {
     height: 100%;
-    background: linear-gradient(135deg, #e0e7ff, #fef3c7);
+    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -21,13 +256,14 @@ body {
     justify-content: center;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: var(--modal-alert-backdrop-background);
     backdrop-filter: blur(4px);
     z-index: 1000;
 }
-.modal {
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.6);
+.modal,
+.resources-modal-content {
+    background: var(--modal-background);
+    border: 1px solid var(--border-color);
     backdrop-filter: blur(16px);
     padding: 1.5rem;
     border-radius: 12px;
@@ -35,13 +271,20 @@ body {
     width: 90%;
     max-width: 80vh;
     overflow: auto;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 24px var(--box-shadow-color);
+    max-height: 90vh;
+    overflow-y: auto;
 }
-.modal-header {
+.modal-header,
+.resources-modal-content h2 {
+    color: var(--classlist-header-and-no-floorplan-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
+}
+.resources-modal-content h2 {
+    justify-content: center;
 }
 .modal-body {
     margin: 1rem 0;
@@ -65,72 +308,177 @@ body {
     font-weight: 500;
 }
 /* make inputs only take up the remaining space */
-.modal-body .form-row input,
-.modal-body .form-row .days-checkboxes {
-    flex: 1;
+.modal-body .form-row > input,
+.modal-body .form-row > .days-checkboxes,
+.modal-body .form-row > .building-container,
+.modal-body .form-row > .range-group {
+    flex: 1 1 60%;
+    box-sizing: border-box;
     max-width: 60%;
 }
+.courseName {
+    text-transform: capitalize;
+}
+.courseCode {
+    text-transform: uppercase;
+}
+.modal-body .form-row > .range-group {
+    display: flex;
+    justify-content: center;
+}
+.modal-body .form-row .range-group input {
+    flex: 1 1 0;
+    max-width: none;
+    padding: 0.3rem;
+    box-sizing: border-box;
+}
+.modal-body .form-row .range-group .separator {
+    flex: none;
+    margin: 0 0.25rem;
+    white-space: nowrap;
+    position: relative;
+    top: 0.35rem;
+}
+@media (max-width: 530px) {
+    .modal-body .form-row > .range-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    .modal-body .form-row .range-group .separator {
+        margin: 0.5rem 0;
+        text-align: center;
+        transform: rotate(90deg);
+        top: 0rem;
+    }
+}
+
 /* reuse glass-style buttons */
-#saveCourses {
+#saveCourses,
+#addEntryBtn,
+#closeModal,
+#closeResourcesModal,
+#closeScheduleModal {
     padding: 0.6rem 1.2rem;
-    background: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: var(--glass-button-background);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
-    color: #333;
+    color: var(--save-course-color);
     font-weight: 500;
     cursor: pointer;
     backdrop-filter: blur(8px);
     transition: background 0.2s, transform 0.1s, border-color 0.2s;
 }
 #addEntryBtn,
-#closeModal {
+#closeModal,
+#closeResourcesModal,
+#closeScheduleModal {
     width: auto;
     align-self: flex-start;
-    padding: 0.6rem 1.2rem;
-    background: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 8px;
-    color: #333;
-    font-weight: 500;
-    cursor: pointer;
-    backdrop-filter: blur(8px);
-    transition: background 0.2s, transform 0.1s, border-color 0.2s;
 }
 #saveCourses:hover,
 #addEntryBtn:hover,
-#closeModal:hover {
-    background: rgba(255, 255, 255, 0.5);
-    border-color: rgba(255, 255, 255, 0.9);
+#closeModal:hover,
+#closeResourcesModal:hover,
+#closeScheduleModal:hover,
+#controls button:hover,
+#daySelect button:not(:disabled):hover {
+    background: var(--button-hover-background);
+    border-color: var(--button-hover-border-color);
     transform: translateY(-2px);
 }
 #entriesContainer {
     max-height: 400px;
     overflow-y: auto;
+    color: var(--theme-label-color);
     padding: 0.5rem;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: var(--entries-container-background);
+    border: 1px solid var(--entries-container-border-color);
     border-radius: 8px;
     backdrop-filter: blur(6px);
 }
-#closeModal {
+#closeModal,
+#closeResourcesModal,
+#closeScheduleModal {
     padding: 0.3rem 0.6rem;
     font-size: 0.9rem;
     line-height: 1;
 }
+#closeResourcesModal {
+    position: absolute;
+    top: 0.75rem; right: 0.75rem;
+    cursor: pointer;
+}
+#closeScheduleModal {
+    position: absolute;
+    top: 5rem; right: 3rem;
+    cursor: pointer;
+}
+.modal-content {
+    position: relative;
+    display: inline-block;
+}
+.modal-content #closeScheduleModal {
+    position: absolute;
+    top: -12px;
+    right: 5px;
+}
+.thumbnail {
+    max-width: 250px;
+    display: block;
+    margin: 0.5rem auto;
+    cursor: pointer;
+}
+.full-image {
+    max-width: 90%;
+    max-height: 90vh;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
 
-/* controls buttons style */
+.has-description {
+    position: relative;
+    margin-bottom: 0.1rem;
+    transition: padding-bottom 0.9s ease;
+}
+li.has-description:hover,
+li.has-description.active {
+    padding-bottom: 0.2rem;
+}
+
+.description {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.6s ease, max-height 0.6s ease;
+    margin-top: 0.1rem;
+    font-size: 0.75rem;
+    color: var(--classlist-header-and-no-floorplan-color);
+    background: var(--modal-background);
+    border-radius: 6px;
+    padding: 0.2rem 0.6rem;
+}
+li.has-description:hover .description,
+li.has-description.active .description {
+    opacity: 1;
+    max-height: 80px;
+}
+
 #controls {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 0.75rem;
-    align-items: center;
+    width: 100%;
+    max-width: 680px;
+    margin: 1rem auto;
+    justify-items: center;
     padding: 1rem 1.5rem;
-    background: rgba(255, 255, 255, 0.25);
+    background: var(--controls-and-daySelect-background);
     border-radius: 12px;
     backdrop-filter: blur(12px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    width: max-content;
-    margin: 1rem auto;
+    box-shadow: 0 8px 24px var(--box-shadow-color);
+    box-sizing: border-box;
+    align-items: center;
 }
 #fileInput {
     display: none;
@@ -138,98 +486,253 @@ body {
 .file-name {
     margin-left: 0.75rem;
     font-size: 0.9rem;
-    color: #444;
+    color: var(--file-name-color);
     font-style: italic;
     display: inline-block;
     padding: 0.25rem 0.5rem;
-    background: rgba(159, 159, 159, 0.2);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: var(--file-name-background);
+    border: 1px solid var(--box-shadow-color);
     border-radius: 4px;
-    max-width: 200px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     vertical-align: middle;
 }
-.custom-file-upload {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background: rgba(255,255,255,0.3);
-  border: 1px solid rgba(255,255,255,0.6);
-  border-radius: 8px;
-  color: #333;
-  font-weight: 500;
-  cursor: pointer;
-  backdrop-filter: blur(8px);
-  transition: background 0.2s, transform 0.1s, border-color 0.2s;
+
+.file-display {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
 }
-.custom-file-upload:hover {
-  background: rgba(255,255,255,0.5);
-  border-color: rgba(255,255,255,0.9);
-  transform: translateY(-2px);
+.view-pdf-icon {
+    display: inline-block;
+    font-size: 1.2em;
+    cursor: pointer;
+    vertical-align: middle;
 }
 
-.btn-group {
-    display: flex;
-    gap: 0.5rem;
+
+/*  */
+.view-pdf-icon[hidden] {
+    display: none;
 }
-#controls button {
+
+.btn-group button {
+    margin-right: 0.5rem;
+}
+
+/* PDF Modal Styles */
+#pdfModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+#pdfModal.open {
+    display: flex;
+}
+.pdf-modal-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.pdf-modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    background: rgb(60,60,60);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1001;
+}
+.pdf-modal-close:hover {
+    background: #4f4f4f;
+}
+.pdf-frame {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/*  */
+.custom-file-upload,
+#loadExampleScheduleBtn {
+    display: inline-block;
     padding: 0.6rem 1.2rem;
-    background: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(255,255,255,0.6);
+    background: var(--file-upload-background);
+    border: 1px solid var(--file-upload-border-color);
     border-radius: 8px;
-    color: #333;
+    color: var(--save-course-color);
     font-weight: 500;
     cursor: pointer;
     backdrop-filter: blur(8px);
     transition: background 0.2s, transform 0.1s, border-color 0.2s;
 }
-#controls button:hover {
-  background: rgba(255, 255, 255, 0.5);
-  border-color: rgba(255,255,255,0.9);
+#loadExampleScheduleBtn {
+    background: var(--load-example-button-background);
+}
+.custom-file-upload:hover,
+#loadExampleScheduleBtn:hover {
+  background: var(--button-hover-background);
+  border-color: var(--file-upload-hover-border-color);
   transform: translateY(-2px);
+}
+#loadExampleScheduleBtn:hover {
+  background: var(--load-example-button-hover-background);
+}
+
+#resourcesModal ul li.no-highlight:hover {
+    background: transparent !important;
+}
+#resourcesModal ul li.no-highlight.selected {
+    background: transparent !important;
+    color: inherit !important;
+}
+
+.btn-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.25rem 0.5rem;
+    width: 100%;
+}
+@media (max-width: 500px) {
+    .btn-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+#overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; 
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    z-index: 2000;
+}
+#overlay.visible {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.drop-text {
+    background: var(--file-drop-background);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--classlist-header-and-no-floorplan-color);
+}
+
+#controls button {
+    padding: 0.6rem 1.2rem;
+    background: var(--glass-button-background);
+    border: 1px solid var(--file-upload-border-color);
+    border-radius: 8px;
+    color: var(--save-course-color);
+    font-weight: 500;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    transition: background 0.2s, transform 0.1s, border-color 0.2s;
+    flex: 1 1 160px;
+    box-sizing: border-box;
 }
 /* load button */
 .btn-group #loadBtn {
-    background: #c7ffe9;
+    background: var(--load-button-background);
 }
 .btn-group #loadBtn:hover {
-    background: #9beccf;
+    background: var(--load-button-hover-background);
+}
+.btn-group #viewResourcesBtn {
+    background: var(--view-resource-button-background);
+}
+.btn-group #viewResourcesBtn:hover {
+    background: var(--view-resource-button-hover-background);
 }
 /* manual input button */
 .btn-group #manualInputBtn {
-    background: #fff8d3;
+    background: var(--manual-input-button-background);
 }
 .btn-group #manualInputBtn:hover {
-    background: #f2e4a8;
+    background: var(--manual-input-button-hover-background);
 }
 /* clear data button */
 .btn-group #clearTempBtn {
-    background: #ffbcbc;
+    background: var(--clear-temporary-button-background);
 }
 .btn-group #clearTempBtn:hover {
-    background: #e4a4a4;
+    background: var(--clear-temporary-button-hover-background);
 }
 
 /* custom alert modal */
 .alert-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: var(--modal-alert-backdrop-background);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
 }
 .alert-box {
-    background: rgba(255, 255, 255, 0.9);
+    color: var(--theme-label-color);
+    background: var(--button-hover-border-color);
     padding: 1.5rem;
     border-radius: 12px;
     max-width: 400px;
     width: 90%;
     text-align: center;
     backdrop-filter: blur(8px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 24px var(--box-shadow-color);
+}
+
+/* override the parent’s centering for all lists in the modal */
+.alert-box ol,
+.alert-box ul {
+    /* reset the browser default indent */
+    padding-inline-start: 1.2em;
+    margin: 1rem 0;
+    /* left‑align the content of the list */
+    text-align: left;
+}
+
+/* give each list item some breathing room */
+.alert-box ol > li,
+.alert-box ul > li {
+    margin-bottom: 0.5em;
+}
+
+.alert-box details {
+    display: block;
+    margin: 0.5em 0;
+    text-align: left;
+}
+.alert-box details summary {
+    cursor: pointer;  
+    color: var(--summary-header-color);
+    padding-left: 0;      
+}
+.alert-box details ol {
+    margin: 0.5em 0 0 1.2em;
+    padding-inline-start: 0;
 }
 
 #alertMessage {
@@ -244,28 +747,29 @@ body {
 
 #alertCancel, 
 #alertOk {
+    color: var(--theme-label-color);
     padding: 0.6rem 1.2rem;
     border-radius: 8px;
     font-weight: 500;
     cursor: pointer;
     transition: background 0.2s, transform 0.1s;
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    border: 1px solid var(--border-color);
     backdrop-filter: blur(8px);
 }
 
 #alertOk {
-    background: #c7ffe9;
+    background: var(--alert-ok-button-background);
 }
 #alertOk:hover {
-    background: #a9f2d0;
+    background: var(--alert-ok-button-hover-background);
     transform: translateX(-2px);
 }
 
 #alertCancel {
-    background: #ffbcbc;
+    background: var(--alert-cancel-button-background);
 }
 #alertCancel:hover {
-    background: #e4a4a4;
+    background: var(--alert-cancel-button-hover-background);
     transform: translateY(-2px);
 }
 
@@ -275,48 +779,63 @@ body {
     gap: 0.5rem;
     padding: 0.75rem;
     margin: 1rem auto;
-    background: rgba(255, 255, 255, 0.25);
+    background: var(--controls-and-daySelect-background);
     border-radius: 12px;
     backdrop-filter: blur(12px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px var(--box-shadow-color);
     justify-content: center;
     width: max-content;
 }
 /* glass-style buttons */
 #daySelect button {
-    flex: 1;
-    max-width: 100px;
+    flex: 1 0 0;
+    flex-basis: 0;
+    width: 100px;
     padding: 0.6rem 1rem;
-    background: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: var(--glass-button-background);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
-    color: #333;
+    color: var(--save-course-color);
     font-weight: 500;
     backdrop-filter: blur(8px);
     cursor: pointer;
     transition: background 0.2s, transform 0.1s;
     box-sizing: border-box;
 }
-/* hover effect for those buttons */
-#daySelect button:hover:not(:disabled):hover{
-    background: rgba(255, 255, 255, 0.5);
-    border-color: rgba(255,255,255,0.9);
-    transform: translateY(-2px);
-}
-
 /* select state */
 #daySelect button.active {
-    background: rgba(255, 255, 255, 0.7);
-    color: #000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background: var(--daySelect-button-active-background);
+    color: var(--daySelect-button-active-color);
+    box-shadow: 0 4px 8px var(--box-shadow-color);
 }
 /* disabled state */
 #daySelect button:disabled {
-    background: rgba(200, 200, 200, 0.2);
-    color: rgba(100, 100, 100, 0.6);
+    background: var(--dayselect-button-disable-background);
+    color: var(--daySelect-button-disable-color);
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
+}
+@media (max-width: 555px) {
+    #daySelect {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        max-width: 360px;
+        margin: 1rem auto;
+    }
+
+    #daySelect button:nth-child(-n+3) {
+        flex: 0 0 30%;
+        min-width: 80px;
+    }
+    #daySelect button:nth-child(n+4) {
+        flex: 0 0 45%;
+        max-width: 100px;
+    }
+
 }
 
 .modal-body .form-row input[type="date"], 
@@ -336,13 +855,22 @@ body {
 /* Days checkboxes: line‑up nicely */
 .modal-body .days-checkboxes {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(90px, auto));
     gap: 0.5rem 1rem;
+    justify-content: center;
 }
 .modal-body .days-checkboxes label {
     display: flex;
     align-items: center;
     margin: 0;
+}
+.modal-body .days-checkboxes.not-checked {
+    border: 1px solid red;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+.modal-body .days-checkboxes.not-checked label {
+    color: red;
 }
 
 /* Style the remove “✕” button so it’s always visible */
@@ -350,18 +878,18 @@ body {
     position: relative;
     padding: 0.5rem;
     margin-bottom: 0.5rem;
-    background: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: var(--glass-button-background);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     backdrop-filter: blur(8px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--box-shadow-color);
 }
 .removeEntryBtn {
     position: absolute;
     top: 0.25rem;
     right: 0.25rem;
-    background: #e74c3c;
-    color: white;
+    background: var(--remove-entry-button-background);
+    color: var(--remove-entry-button-color);
     border: none;
     border-radius: 50%;
     width: 1.5rem;
@@ -374,7 +902,7 @@ body {
     justify-content: center;
 }
 .removeEntryBtn:hover {
-    background: #c0392b;
+    background: var(--remove-entry-button-hover-background);
 }
 
 .form-row .days-checkboxes,
@@ -387,33 +915,56 @@ body {
     margin-top:0.75rem; 
     align-self:flex-end; 
     padding:0.3rem 0.6rem; 
-    background:#3498db; 
-    color:white; 
+    background:var(--apply-default-button-background); 
+    color: var(--remove-entry-button-color); 
     border:none; 
     border-radius:4px; 
     cursor:pointer;
 }
 .applyDefaultsBtn:hover {
-    background: #2a7fb8;
+    background: var(--apply-default-button-hover-background);
 }
+
 
 /* revert button for manual input */
 .applyDefaultsBtn.revert {
-    background: #e67e22;
+    background: var(--apply-default-revert-button-background);
 }
 .applyDefaultsBtn.revert:hover {
-    background: #d35400;
+    background: var(--apply-default-revert-button-hover-background);
 }
 
 /* format the required star */
 .required-star {
-    color: red;
+    color: var(--required-star-color);
     position: relative;
     top: -0.2em;
     font-size: 0.8em;
 }
 
-#classList li {
+.courseName, 
+.courseCode, 
+.courseSection, 
+.creditHours, 
+.crn, 
+.startDate, 
+.endDate, 
+.days-checkboxes .dayChk, 
+.startTime, 
+.endTime, 
+.building, 
+.room, 
+.instructor {
+    background: var(--input-background);
+    border-width: 1px;
+    border-radius: 4px;
+}
+
+
+
+#classList li,
+.resources-modal-content li {
+    color: var(--classlist-color);
     display: block;
     padding: 0.2rem 0.5rem;
     margin: 0.25rem auto;
@@ -422,11 +973,19 @@ body {
     cursor: pointer;
     text-align: center;
 }
-#classList li:hover {
-    background: rgba(52, 152, 219, 0.1);
+.resources-modal-content li a {
+    color: var(--classlist-header-and-no-floorplan-color);
+    text-decoration: none;
 }
-#classList li.selected {
-    background: rgba(41, 128, 185, 0.2);
+#classList li:hover,
+.resources-modal-content li:hover {
+    border-radius: 6px;
+    background: var(--classlist-hover-background);
+}
+#classList li.selected,
+.resources-modal-content li.selected {
+    border-radius: 6px;
+    background: var(--classlist-selected-background);
 }
 #classList {
     padding: 0;
@@ -436,10 +995,13 @@ body {
 }
 .classListHeader {
     font-size: 1.8rem;
-    color: #555;
+    color: var(--classlist-header-and-no-floorplan-color);
     margin-bottom: 0.5rem;
     padding: 0 1rem;
     text-align: left;
+}
+#classList.no-classes {
+    color: var(--theme-label-color);
 }
 
 .classListHeader {
@@ -450,10 +1012,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 300px; /* or whatever height looks good */
+    min-height: 300px;
     font-size: 1.5rem;
     font-weight: 500;
-    color: #555;
+    color: var(--classlist-header-and-no-floorplan-color);
     text-align: center;
     padding: 1rem;
 }
@@ -464,39 +1026,68 @@ body {
 
 .building-container {
     position: relative;
-    flex: 1;
-    max-width: 65%;
 }
 .building-container .building {
-    width: 100%; /* Fill the container */
+    width: 100%;
     box-sizing: border-box;
 }
 
 .building-dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  max-height: 100px;
-  overflow-y: auto;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(6px);
-  z-index: 100;
-  display: none;
-  border-radius: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 100px;
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    background: var(--building-dropdown-background);
+    backdrop-filter: blur(6px);
+    z-index: 100;
+    display: none;
+    border-radius: 6px;
 }
 
 .building-dropdown.show {
-  display: block;
+    display: block;
 }
 
 .building-dropdown div {
-  padding: 0.5rem;
-  cursor: pointer;
-  transition: background 0.2s;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
 .building-dropdown div:hover {
-  background: rgba(52, 152, 219, 0.1);;
+    background: var(--building-dropdown-hover-background);
+}
+
+@media (max-width: 350px) {
+    .modal-body .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .modal-body .form-row label {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        text-align: left;
+    }
+
+    .modal-body .form-row > input,
+    .modal-body .form-row > .days-checkboxes,
+    .modal-body .form-row > .building-container,
+    .modal-body .form-row > .range-group {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-body .form-row .range-group {
+        flex-direction: column;
+        align-items: stretch;
+        flex-direction: column;
+        align-items: center;
+    }
 }

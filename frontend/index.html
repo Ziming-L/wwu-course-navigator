@@ -1,6 +1,12 @@
 <!DOCTYPE html>
+<!-- 
+WWU Course Navigator - Frontend Interface
+This application provides an interactive way to visualize class schedules and locations
+at Western Washington University. It supports both PDF schedule uploads and manual input.
+-->
 <html lang="en">
 <head>
+    <!-- Character encoding and viewport settings for proper responsive behavior -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WWU Schedule Map</title>
@@ -8,9 +14,11 @@
     <link rel="icon" type="image/png" href="static/favicon.png">
 </head>
 <body>
+    <!-- Drag and drop overlay for PDF uploads -->
     <div id="overlay" hidden>
         <div class="drop-text">Drop PDF here</div>
     </div>
+    <!-- Theme toggle control for dark/light mode -->
     <div id="themeToggle">
         <button type="button" id="darkModeSwitch">
             <span class="theme-icon">🌙</span>
@@ -18,7 +26,9 @@
         </button>
     </div>
     <h1>WWU Class Map Visualizer</h1>
+    <!-- Main control panel for file upload and application controls -->
     <div id="controls">
+        <!-- Hidden file input with custom styled label -->
         <input type="file" id="fileInput" accept="application/pdf" hidden>
         <label for="fileInput" class="custom-file-upload">Choose PDF...</label>
 
@@ -35,6 +45,7 @@
         </div>
     </div>
 
+    <!-- PDF modal for uploaded schedule -->
     <div id="pdfModal">
         <div class="pdf-modal-content">
             <button id="pdfModalClose" class="pdf-modal-close" title="Close viewer">✕</button>
@@ -42,6 +53,7 @@
         </div>
     </div>
 
+    <!-- Day selection navigation for viewing schedule by weekday -->
     <div id="daySelect">
         <button type="button" data-day="Monday">Monday</button>
         <button type="button" data-day="Tuesday">Tuesday</button>
@@ -49,11 +61,15 @@
         <button type="button" data-day="Thursday">Thursday</button>
         <button type="button" data-day="Friday">Friday</button>
     </div>
+    <!-- Main display area for schedule and floorplan visualization -->
     <div id="scheduleDisplay">
+        <!-- Dynamic list of classes for the selected day -->
         <ul id="classList"></ul>
+        <!-- Container for displaying building floorplans -->
         <div id="floorplanContainer"></div>
     </div>
 
+    <!-- Modal for manual course entry -->
     <div class="modal-backdrop" id="manualModal">
         <div class="modal">
             <div class="modal-header">
@@ -70,6 +86,7 @@
         </div>
     </div>
 
+    <!-- Modal for resource information -->
     <div id="resourcesModal" class="modal-backdrop">
         <div class="resources-modal-content">
             <button type="button" id="closeResourcesModal">x</button>
@@ -109,7 +126,7 @@
             </ul>
         </div>
     </div>
-
+    <!-- Zoom in view of the example PDF -->
     <div id="scheduleModal" class="modal-backdrop">
         <div class="modal-content">
             <button type="button" id="closeScheduleModal">Close</button>
@@ -118,6 +135,7 @@
     </div>
 
 
+    <!-- Custom alert modal for user notifications and confirmations -->
     <div id="customAlert" class="alert-backdrop" style="display:none;">
         <div class="alert-box">
             <p id="alertMessage"></p>
@@ -128,6 +146,7 @@
         </div>
     </div>
 
+    <!-- Main application JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>

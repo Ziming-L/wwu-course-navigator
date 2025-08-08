@@ -5,25 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WWU Schedule Map</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="static/favicon.png">
 </head>
 <body>
-    <!-- <div id="themeToggle" style="text-align: center; margin: 1rem;">
-        <label>
-            <input type="checkbox" id="darkModeSwitch">
-            🌙 Dark Mode
-        </label>
-    </div> -->
+    <div id="overlay" hidden>
+        <div class="drop-text">Drop PDF here</div>
+    </div>
+    <div id="themeToggle">
+        <button type="button" id="darkModeSwitch">
+            <span class="theme-icon">🌙</span>
+            <span class="theme-label">Dark Mode</span>
+        </button>
+    </div>
     <h1>WWU Class Map Visualizer</h1>
     <div id="controls">
-        <input type="file" id="fileInput" accept="application/pdf hidden">
+        <input type="file" id="fileInput" accept="application/pdf" hidden>
         <label for="fileInput" class="custom-file-upload">Choose PDF...</label>
-        <span id="fileName" class="file-name">No file chosen</span>
+
+        <div class="file-display">
+            <span id="fileName" class="file-name">No file chosen</span>
+            <span id="viewPdfIcon" class="view-pdf-icon" hidden title="View loaded PDF">🗂️</span>
+        </div>
 
         <div class="btn-group">
             <button type="button" id="loadBtn">Load Schedule</button>
             <button type="button" id="manualInputBtn">Manual Input</button>
+            <button type="button" id="viewResourcesBtn">View Resources</button>
             <button type="button" id="clearTempBtn">Clear Data</button>
+        </div>
+    </div>
+
+    <div id="pdfModal">
+        <div class="pdf-modal-content">
+            <button id="pdfModalClose" class="pdf-modal-close" title="Close viewer">✕</button>
+            <iframe id="pdfFrame" class="pdf-frame" frameborder="0" title="Schedule"></iframe>
         </div>
     </div>
 
@@ -37,7 +52,6 @@
     <div id="scheduleDisplay">
         <ul id="classList"></ul>
         <div id="floorplanContainer"></div>
-        <!-- <div id="map" style="height: 400px;"></div> -->
     </div>
 
     <div class="modal-backdrop" id="manualModal">
@@ -55,6 +69,54 @@
             </div>
         </div>
     </div>
+
+    <div id="resourcesModal" class="modal-backdrop">
+        <div class="resources-modal-content">
+            <button type="button" id="closeResourcesModal">x</button>
+            <ul>
+                <h2>More Resources</h2>
+                <li class="has-description">
+                    <a href="https://fdo.wwu.edu/campus-floor-plans" target="_blank">Floor Plans</a>
+                    <div class="description">
+                        Official WWU building floor plans provided by Facilities Development.<br>
+                        These were used as the source for the floor plan visuals on this site.
+                    </div>
+                </li>
+                <li class="has-description">
+                    <a href="https://map.wwu.edu" target="_blank">Interactive Campus Map</a>
+                    <div class="description">
+                        Interactive campus map with building locations and accessibility details.<br>
+                        Used to find and extract the coordinates of each building for this site.
+                    </div>
+                </li>
+                <li class="has-description">
+                    <a href="https://bookstore.wwu.edu/buy_textbooks.asp?" target="_blank">WWU BookStore</a>
+                    <div class="description">
+                        Search the WWU Bookstore for textbooks required in the current quarter.
+                    </div>
+                </li>
+                <li id="exampleScheduleRow" class="has-description">
+                    <img id="schedThumbnail" src="static/schedule_example.png" alt="Example Schedule" class="thumbnail">
+                    <div class="description">
+                        Example schedule PDF.<br>
+                        To generate and view your <strong>own</strong> schedule PDF, please follow the instructions: 
+                        <u><strong><a href="#" id="openInstructionLink" class="instruction-link">Click here</a></strong></u>.
+                    </div>
+                </li>
+                <li class="no-highlight">
+                    <button id="loadExampleScheduleBtn">Load Example Schedule</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="scheduleModal" class="modal-backdrop">
+        <div class="modal-content">
+            <button type="button" id="closeScheduleModal">Close</button>
+            <img src="static/schedule_example.png" alt="Full‑Size Schedule" class="full-image">
+        </div>
+    </div>
+
 
     <div id="customAlert" class="alert-backdrop" style="display:none;">
         <div class="alert-box">

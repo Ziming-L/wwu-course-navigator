@@ -6,6 +6,7 @@ from pathlib import Path
 from rich.console import Console
 from rich.panel import Panel
 from schedule_parser import extract_raw_text_from_pdf, process_parser_for_schedule
+import atexit
 
 console = Console()
 
@@ -28,6 +29,17 @@ def user_dirs():
     os.makedirs(user_floor, exist_ok=True)
     return user_temp, user_floor
 
+def remove_temporary_data():
+    # delete the main directory if empty
+    if BASE_TEMP_DIR.exists():
+        shutil.rmtree(BASE_TEMP_DIR)
+        print()
+        console.print(Panel.fit(
+            f"[red]🧹 Cleaned up [underline]temporary_data[/] on shutdown[/]",
+            border_style="red",
+        ))
+
+atexit.register(remove_temporary_data)
 
 @app.route("/cleanup/<tab_id>", methods=["POST"])
 def cleanup(tab_id):
@@ -37,8 +49,8 @@ def cleanup(tab_id):
         if user_temp.exists():
             shutil.rmtree(user_temp)
             # delete the main directory if empty
-            if BASE_TEMP_DIR.exists() and not any(BASE_TEMP_DIR.iterdir()):
-                BASE_TEMP_DIR.rmdir()
+            if not any(BASE_TEMP_DIR.iterdir()):
+                remove_temporary_data()
 
             console.print(Panel.fit(
                 "[bold red]🗑️ Temporary Data Cleaned Up[/bold red]\n"
@@ -96,8 +108,8 @@ def parse_text():
 
     raw_text = []
     for e in entries:
-        raw_text.append(e["courseName"])
-        raw_text.append(f"{e['courseCode']} {e['courseSection']}")
+        raw_text.append(e["courseName"].title())
+        raw_text.append(f"{e['courseCode'].upper()} {e['courseSection']}")
         raw_text.append(str(e["creditHours"]))
         raw_text.append(str(e["crn"]))
         raw_text.append(f"{e['startDate']} - {e['endDate']}")
@@ -132,6 +144,12 @@ def serve_floorplan(tab_id, filename):
 def data_files(filename):
     json_path = PROJECT_ROOT / 'data'
     return send_from_directory(json_path, filename)
+
+@app.route("/<tab_id>/schedule.pdf")
+def get_schedule_pdf(tab_id):
+    user_temp = BASE_TEMP_DIR / tab_id
+    return send_from_directory(directory=str(user_temp), path='schedule.pdf', as_attachment=False)
+
 
 if __name__ == "__main__":
     console.print(Panel.fit(

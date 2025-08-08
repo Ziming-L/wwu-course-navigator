@@ -49,6 +49,7 @@ def extract_raw_text_from_pdf(pdf_path: str, page_number: Optional[int] = None) 
 
     Args: 
         pdf_path (str): path to schedule pdf
+        page_number (Optional[int]): specific page number to extract, if None, extract all pages
 
     Returns:
         lines (list): text in list form
@@ -140,6 +141,7 @@ def parse_schedule_text(lines: str) -> dict:
             
             # pull building/room from the last two comma‐parts
             temp     = [p.strip() for p in location_line.split(',')]
+            campus = temp[0] if len(temp) > 2 else "Unknown Campus"
             building = temp[-2]
             room     = temp[-1]
             
@@ -147,6 +149,7 @@ def parse_schedule_text(lines: str) -> dict:
             entry = {
                 'course': f"{course_code} - {title}",
                 'time':   time_line,
+                'campus': campus,
                 'building': building,
                 'room':    room, 
                 'instructor' : instructor

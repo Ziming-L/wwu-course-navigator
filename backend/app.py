@@ -1,3 +1,15 @@
+"""
+WWU Course Navigator Backend (Flask App)
+----------------------------------------
+This file implements the backend server for the WWU Course Navigator application.
+It handles PDF schedule uploads, manual course entry, session-based temporary data,
+and serves frontend/static files and floorplans. The backend uses Flask, supports CORS,
+and provides REST endpoints for schedule parsing and resource management.
+
+Author: Ziming L.
+Last updated: August 2025
+"""
+
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import os
@@ -20,6 +32,14 @@ app = Flask(__name__, static_folder=str(FRONTEND_DIR), static_url_path="")
 CORS(app)
 
 def user_dirs():
+    """
+    Determines the temporary and floorplan directories for the current user session.
+    Uses the X-Tab-ID header if present, otherwise falls back to the remote address.
+    Ensures the directories exist.
+
+    Returns:
+        tuple: (user_temp, user_floor) as Path objects
+    """
     tab_id = request.headers.get('X-Tab-ID')
     if not tab_id:
         tab_id = request.remote_addr
@@ -30,7 +50,10 @@ def user_dirs():
     return user_temp, user_floor
 
 def remove_temporary_data():
-    # delete the main directory if empty
+    """
+    Deletes the entire temporary_data directory and prints a message to the console.
+    Used for cleanup on server shutdown.
+    """
     if BASE_TEMP_DIR.exists():
         shutil.rmtree(BASE_TEMP_DIR)
         print()
@@ -43,6 +66,11 @@ atexit.register(remove_temporary_data)
 
 @app.route("/cleanup/<tab_id>", methods=["POST"])
 def cleanup(tab_id):
+    """
+    Endpoint to clean up a user's temporary data directory.
+    Deletes the user's temp directory and, if empty, the main temp directory as well.
+    Returns a JSON status message.
+    """
     try:
         user_temp = BASE_TEMP_DIR / tab_id
         # delete if user temporary_data exists
@@ -64,10 +92,18 @@ def cleanup(tab_id):
 
 @app.route("/")
 def index():
+    """
+    Serves the main frontend index.html file.
+    """
     return app.send_static_file("index.html")
 
 @app.route("/parse_schedule", methods=["POST"])
 def parse_schedule():
+    """
+    Endpoint to handle schedule PDF uploads.
+    Saves the uploaded PDF, extracts raw text, parses the schedule, and returns the parsed data as JSON.
+    On error, returns a JSON error message.
+    """
     user_temp, user_floor = user_dirs()
     schedule_path = user_temp / "schedule.pdf"
     output_json = user_temp / "schedule_parsed.json"
@@ -101,6 +137,11 @@ def parse_schedule():
 
 @app.route("/parse_text", methods=["POST"])
 def parse_text():
+    """
+    Endpoint to handle manual course entry submissions.
+    Converts the entries into a raw text format, parses the schedule, and returns the parsed data as JSON.
+    On error, returns a JSON error message.
+    """
     user_temp, user_floor = user_dirs()
     output_json = user_temp / "schedule_parsed.json"
     data = request.get_json() or {}
@@ -136,17 +177,26 @@ def parse_text():
 
 @app.route("/<tab_id>/floorplans/<path:filename>")
 def serve_floorplan(tab_id, filename):
+    """
+    Serves a floorplan PDF for a given user session and filename.
+    """
     user_temp = BASE_TEMP_DIR / tab_id
     user_floor = user_temp / 'floorplans'
     return send_from_directory(str(user_floor), filename)
 
 @app.route("/data/<path:filename>")
 def data_files(filename):
+    """
+    Serves static data files (e.g., building maps, JSON) from the data directory.
+    """
     json_path = PROJECT_ROOT / 'data'
     return send_from_directory(json_path, filename)
 
 @app.route("/<tab_id>/schedule.pdf")
 def get_schedule_pdf(tab_id):
+    """
+    Serves the uploaded schedule PDF for a given user session.
+    """
     user_temp = BASE_TEMP_DIR / tab_id
     return send_from_directory(directory=str(user_temp), path='schedule.pdf', as_attachment=False)
 

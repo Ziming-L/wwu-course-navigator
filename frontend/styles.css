@@ -1,3 +1,16 @@
+/*
+ * WWU Course Navigator Stylesheet
+ * --------------------------------
+ * This file defines all CSS variables, layout, and component styles for the
+ * WWU Course Navigator frontend. It supports both light and dark themes,
+ * modal dialogs, responsive layouts, and custom UI components for course
+ * entry, schedule display, and resource modals.
+ *
+ * Author: Ziming L.
+ * Last updated: August 2025
+ */
+
+/* Base color for the website */
 :root {
     --theme-switch-bg-start: #9de8ff;
     --theme-switch-bg-end: #ffe991;
@@ -82,6 +95,7 @@
     --building-dropdown-hover-background: rgba(52, 152, 219, 0.1);
 }
 
+/* Dark mode color for the website */
 body.dark {
     --theme-switch-bg-start: #4a4a65;
     --theme-switch-bg-end: #4e364d;
@@ -170,7 +184,7 @@ body.dark {
 
 }
 
-
+/* Style for the theme button */
 #themeToggle {
     position: fixed;
     top: 0.7rem;
@@ -185,7 +199,6 @@ body.dark {
     height: auto;
     overflow: visible;
 }
-
 #darkModeSwitch {
     display: flex;
     align-items: center;
@@ -209,7 +222,6 @@ body.dark {
 .theme-label {
     color: var(--theme-label-color);
 }
-
 #themeToggle.scrolled #darkModeSwitch {
     opacity: 0;
     pointer-events: none;
@@ -233,13 +245,14 @@ body.dark {
     }
 }
 
-/* header style */
+/* Header style */
 h1 {
     text-align: center;
     font-size: 3rem;
     color: var(--h1-color);
 }
 
+/* Body style */
 body {
     height: 100%;
     background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
@@ -436,6 +449,7 @@ body {
     margin: 1rem auto;
 }
 
+/* Resource modal li style */
 .has-description {
     position: relative;
     margin-bottom: 0.1rem;
@@ -445,7 +459,6 @@ li.has-description:hover,
 li.has-description.active {
     padding-bottom: 0.2rem;
 }
-
 .description {
     opacity: 0;
     max-height: 0;
@@ -464,6 +477,7 @@ li.has-description.active .description {
     max-height: 80px;
 }
 
+/* Home page control box */
 #controls {
     display: grid;
     grid-template-columns: 1fr;
@@ -498,7 +512,6 @@ li.has-description.active .description {
     text-overflow: ellipsis;
     vertical-align: middle;
 }
-
 .file-display {
     display: inline-flex;
     align-items: center;
@@ -510,9 +523,6 @@ li.has-description.active .description {
     cursor: pointer;
     vertical-align: middle;
 }
-
-
-/*  */
 .view-pdf-icon[hidden] {
     display: none;
 }
@@ -571,7 +581,6 @@ li.has-description.active .description {
     border: none;
 }
 
-/*  */
 .custom-file-upload,
 #loadExampleScheduleBtn {
     display: inline-block;
@@ -654,7 +663,7 @@ li.has-description.active .description {
     flex: 1 1 160px;
     box-sizing: border-box;
 }
-/* load button */
+/* Load button */
 .btn-group #loadBtn {
     background: var(--load-button-background);
 }
@@ -667,14 +676,14 @@ li.has-description.active .description {
 .btn-group #viewResourcesBtn:hover {
     background: var(--view-resource-button-hover-background);
 }
-/* manual input button */
+/* Manual input button */
 .btn-group #manualInputBtn {
     background: var(--manual-input-button-background);
 }
 .btn-group #manualInputBtn:hover {
     background: var(--manual-input-button-hover-background);
 }
-/* clear data button */
+/* Clear data button */
 .btn-group #clearTempBtn {
     background: var(--clear-temporary-button-background);
 }
@@ -682,7 +691,7 @@ li.has-description.active .description {
     background: var(--clear-temporary-button-hover-background);
 }
 
-/* custom alert modal */
+/* Custom alert modal */
 .alert-backdrop {
     position: fixed;
     inset: 0;
@@ -704,17 +713,15 @@ li.has-description.active .description {
     box-shadow: 0 8px 24px var(--box-shadow-color);
 }
 
-/* override the parent’s centering for all lists in the modal */
+/* Override the parent’s centering for all lists in the modal */
 .alert-box ol,
 .alert-box ul {
-    /* reset the browser default indent */
     padding-inline-start: 1.2em;
     margin: 1rem 0;
-    /* left‑align the content of the list */
     text-align: left;
 }
 
-/* give each list item some breathing room */
+/* Give each list item some breathing room */
 .alert-box ol > li,
 .alert-box ul > li {
     margin-bottom: 0.5em;
@@ -773,7 +780,7 @@ li.has-description.active .description {
     transform: translateY(-2px);
 }
 
-/* container behind the daySelect buttons */
+/* Container behind the daySelect buttons */
 #daySelect {
     display: flex;
     gap: 0.5rem;
@@ -786,7 +793,7 @@ li.has-description.active .description {
     justify-content: center;
     width: max-content;
 }
-/* glass-style buttons */
+/* Glass-style buttons */
 #daySelect button {
     flex: 1 0 0;
     flex-basis: 0;
@@ -802,13 +809,13 @@ li.has-description.active .description {
     transition: background 0.2s, transform 0.1s;
     box-sizing: border-box;
 }
-/* select state */
+/* Select state */
 #daySelect button.active {
     background: var(--daySelect-button-active-background);
     color: var(--daySelect-button-active-color);
     box-shadow: 0 4px 8px var(--box-shadow-color);
 }
-/* disabled state */
+/* Disabled state */
 #daySelect button:disabled {
     background: var(--dayselect-button-disable-background);
     color: var(--daySelect-button-disable-color);
@@ -910,7 +917,7 @@ li.has-description.active .description {
     flex: 1; max-width: 70%;
 }
 
-/* default button for manual input */
+/* Default button for manual input */
 .applyDefaultsBtn {
     margin-top:0.75rem; 
     align-self:flex-end; 
@@ -925,8 +932,7 @@ li.has-description.active .description {
     background: var(--apply-default-button-hover-background);
 }
 
-
-/* revert button for manual input */
+/* Revert button for manual input */
 .applyDefaultsBtn.revert {
     background: var(--apply-default-revert-button-background);
 }
@@ -934,7 +940,7 @@ li.has-description.active .description {
     background: var(--apply-default-revert-button-hover-background);
 }
 
-/* format the required star */
+/* Format the required star */
 .required-star {
     color: var(--required-star-color);
     position: relative;
@@ -959,8 +965,6 @@ li.has-description.active .description {
     border-width: 1px;
     border-radius: 4px;
 }
-
-
 
 #classList li,
 .resources-modal-content li {

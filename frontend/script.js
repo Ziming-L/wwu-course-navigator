@@ -11,7 +11,7 @@
 // Holds the schedule JSON returned from the server
 let scheduleData = {};
 // Backend server location
-const BACKEND = 'http://127.0.0.1:5000';
+const BACKEND = 'https://wwu-course-navigator.onrender.com';
 
 // DOM element references for UI controls and containers
 const toggleContainer = document.getElementById('themeToggle');

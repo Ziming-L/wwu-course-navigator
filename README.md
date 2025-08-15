@@ -21,6 +21,9 @@
 
 WWU Course Navigator helps students locate their classrooms and office hours across campus. The app allows students to enter information about their courses and instructors to receive guidance on classroom locations and office hour locations. Both the frontend and backend are hosted on Render, with the backend managing and serving dynamic location data.
 
+> ⚠️ **Browser Recommendation:**  
+> For the best experience, use **Google Chrome**. Other browsers may have limited PDF support or layout issues.
+
 Below is the main interface of **WWU Class Map Visualizer**:
 
 ![WWU Class Map Visualizer](./screenshot.png)

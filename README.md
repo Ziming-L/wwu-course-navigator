@@ -126,7 +126,7 @@ python3 -m backend.app
 
 ## Deployment
 
-🚀 Both Backend and Frontend are on [Render] (https://render.com)
+🚀 Both Backend and Frontend are on [Render](https://render.com)
 
 ---
 

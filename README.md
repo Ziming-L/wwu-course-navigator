@@ -24,9 +24,9 @@ WWU Course Navigator helps students locate their classrooms and office hours acr
 > ⚠️ **Browser Recommendation:**  
 > For the best experience, use **Google Chrome**. Other browsers may have limited PDF support or layout issues.
 
-Below is the main interface of **WWU Class Map Visualizer**:
+Below is the main interface of **WWU Course Navigator**:
 
-![WWU Class Map Visualizer](./screenshot.png)
+![WWU Course Navigator](./screenshot.png)
 
 ### Button & Feature Descriptions
 

@@ -580,11 +580,12 @@ function createIframe(src, width, height, onloadMsg, onerrorMsg, styleObj = {}) 
  * - If latitude and longitude are provided, also embeds a Google Maps iframe below the PDF.
  * - Handles missing data gracefully with user feedback and console warnings.
  *
+ * @async async function.
  * @param {string} pdfPath - Path or filename of the floor plan PDF to display.
  * @param {number|null} lat - Latitude for the building location (if null, map is not shown).
  * @param {number|null} lon - Longitude for the building location (if null, map is not shown).
  */
-function showFloorplan(pdfPath, lat, lon) {
+async function showFloorplan(pdfPath, lat, lon) {
     // Remove any previous floorplan/map content
     clearEl(floorplanContainer);
 
@@ -603,6 +604,24 @@ function showFloorplan(pdfPath, lat, lon) {
     const pdfUrl = `${BACKEND}/${tabId}/floorplans/${fn}`;
 
     console.log('[showFloorplan] → url:', pdfUrl);
+
+    // check for server not responding
+    try {
+        const res = await fetch(pdfUrl, {method: 'HEAD'});
+        if (!res.ok) {
+            showAlert(`⚠️ Could not load floorplan (server returned ${res.status})
+                <br>Please try again later.`, false, () => {
+                console.warn("Acknowledged not loading floorplan");
+            });
+            return;
+        }
+    } catch (err) {
+        showAlert(`❌ Cannot connect to server. Please try again later.`, false, () => {
+            console.warn("Acknowledged not loading floorplan");
+        });
+        return;
+    }
+
     // Create and configure the PDF iframe
     const pdfFrame = createIframe(
         pdfUrl,

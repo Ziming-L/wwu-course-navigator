@@ -5,3 +5,4 @@ rich
 rapidfuzz
 Flask
 flask-cors
+gunicorn

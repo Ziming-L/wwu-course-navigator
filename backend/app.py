@@ -29,7 +29,7 @@ BASE_TEMP_DIR = PROJECT_ROOT / "temporary_data"
 
 # --- App setup ---
 app = Flask(__name__, static_folder=str(FRONTEND_DIR), static_url_path="")
-CORS(app)
+CORS(app, origins=["https://wwu-course-navigator.onrender.com"])
 
 def user_dirs():
     """

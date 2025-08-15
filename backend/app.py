@@ -202,7 +202,7 @@ def get_schedule_pdf(tab_id):
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5500))
+    port = int(os.environ.get("PORT", 5000))
     console.print(Panel.fit(
         "[bold green]🗄️  Server Running[/bold green]\n"
         f"[cyan]Visit:[/cyan] [underline]http://127.0.0.1:{port}[/underline]",

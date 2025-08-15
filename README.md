@@ -26,7 +26,7 @@ WWU Course Navigator helps students locate their classrooms and office hours acr
 
 Below is the main interface of **WWU Course Navigator**:
 
-![WWU Course Navigator](./screenshot.png)
+![WWU Course Navigator](./web_screenshot.png)
 
 ### Button & Feature Descriptions
 
@@ -217,7 +217,7 @@ wwu-course-navigator/
 │       └── schedule_example.png
 ├── requirements.txt
 ├── README.md
-├── screenshot.png
+├── web_screenshot.png
 └── LICENSE
 ```
 

@@ -4,7 +4,7 @@ schedule_parser.py
 Get the text from schedule pdf and highlighted rooms to put it into a JSON file in temporary_data
     - temporary_data: a temporary directory to be deleted for each user for privacy after finish
 """
-import room_finder
+from backend import room_finder
 
 import os.path
 import fitz

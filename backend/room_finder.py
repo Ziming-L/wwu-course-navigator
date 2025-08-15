@@ -3,7 +3,7 @@ room_finder.py
 
 Helper functions to highlight a room on the matching PDF floorplan.
 """
-import schedule_parser as sched_parser
+import backend.schedule_parser as sched_parser
 from rapidfuzz import process, fuzz
 from rich.console import Console
 import fitz

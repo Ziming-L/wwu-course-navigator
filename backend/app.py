@@ -17,7 +17,7 @@ import shutil
 from pathlib import Path
 from rich.console import Console
 from rich.panel import Panel
-from .schedule_parser import extract_raw_text_from_pdf, process_parser_for_schedule
+from backend.schedule_parser import extract_raw_text_from_pdf, process_parser_for_schedule
 import atexit
 
 console = Console()

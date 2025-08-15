@@ -21,6 +21,48 @@
 
 WWU Campus Navigator helps students locate their classrooms and office hours across campus. The app allows students to enter information about their courses and instructors to receive guidance on classroom locations and office hour locations. Both the frontend and backend are hosted on Render, with the backend managing and serving dynamic location data.
 
+Below is the main interface of **WWU Class Map Visualizer**:
+
+![WWU Class Map Visualizer](./screenshot.png)
+
+### Button & Feature Descriptions
+
+1. **Choose PDF...**  
+   - Allows the user to upload a **schedule PDF** from WWU.  
+   - The app reads the PDF to extract class times and locations.
+
+2. **Load Schedule**  
+   - Processes the selected PDF or previously uploaded data.  
+   - Maps the classes onto the WWU floorplans automatically.
+   - Enables day buttons and displays course information.
+
+3. **Manual Input**  
+   - Enter class information manually if a PDF isn’t available.  
+   - Useful for custom schedules or non-standard course formats.
+
+4. **View Resources**  
+   - Opens additional tools, links, or reference materials related to course planning.  
+   - Examples: campus building maps, department websites, example schedules, and steps to get the PDF.
+
+5. **Clear Data**  
+   - Removes all loaded schedule data from the interface.  
+   - No data is permanently stored on the server; clearing is immediate.
+
+6. **Day Buttons (Monday – Friday)**  
+   - Filter the schedule to show only classes for a specific day.  
+   - Highlights relevant locations on the floorplan for that day.
+   - Displays a Google Map for the selected course.
+
+7. **Dark Mode Toggle**  
+   - Switches the interface between light and dark themes for better visibility or user preference.
+
+---
+
+### Notes:
+
+- Instructions for downloading the schedule PDF are available under **View Resources**.
+- ***Hover over*** the last list item and ***click*** “**Click here**” to access the **PDF download steps**.
+
 ---
 
 ## Features
@@ -172,6 +214,7 @@ wwu-course-navigator/
 │       └── schedule_example.png
 ├── requirements.txt
 ├── README.md
+├── screenshot.png
 └── LICENSE
 ```
 
